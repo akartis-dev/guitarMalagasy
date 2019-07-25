@@ -63,7 +63,8 @@ const createListNavigator = createStackNavigator({
             const titre = navigation.getParam('Artiste').toUpperCase()
             return(
             {
-                title : titre 
+                header: null,
+                //title : titre 
             }     
             )
         }
