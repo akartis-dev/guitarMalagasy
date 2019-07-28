@@ -1,15 +1,12 @@
 import React from 'react'
 import {Image, StyleSheet, Button } from 'react-native'
-import {createStackNavigator, createAppContainer, createBottomTabNavigator} from 'react-navigation'
+import {createStackNavigator, createAppContainer, createMaterialTopTabNavigator } from 'react-navigation'
 import Acceuil from '../components/Acceuil'
 import Favorite from '../components/Favorite'
 import ListeArtiste from '../components/ListeArtiste'
 import HiraNote from '../components/HiraNote'
 import HiraArtista from '../components/HiraArtista'
 import HiraRehetra from '../components/HiraRehetra'
-
-// //header button
-import { MaterialHeaderButtons, Item } from './Header'
 
 
 /**
@@ -18,10 +15,8 @@ import { MaterialHeaderButtons, Item } from './Header'
 const createSearchNavigator = createStackNavigator({
     Acceuil : {
         screen : Acceuil,
-        navigationOptions : ({navigation}) =>{
-            return({
-                title : "GLITA MALAGASY",
-            })
+        navigationOptions : {
+            header : null,
         }
     }, 
     HiraNote : {
@@ -37,7 +32,8 @@ const createFavoriteNavigator = createStackNavigator({
     Favorite : {
         screen : Favorite,
         navigationOptions : {
-            title : 'HIRA SAFIDINAO'
+            title : 'HIRA SAFIDINAO',
+            header: null,
         }
     }, 
     HiraNote : {
@@ -47,14 +43,33 @@ const createFavoriteNavigator = createStackNavigator({
 })
 
 /**
+ * Favorite navigationOptions supplementaire
+ * HIDE TABBAR IN NOTE VIEW
+ * return true ou false pour la tabBar
+ */
+createFavoriteNavigator.navigationOptions = ({navigation}) => {
+    let tabBarVisible = true;
+
+    //acceder a noter nom du vue sur notre navigation
+    let routeName = navigation.state.routes[navigation.state.index].routeName
+
+    if ( routeName == 'HiraNote' ) {
+        tabBarVisible = false
+    }
+    return {
+        tabBarVisible,
+    }
+}
+
+
+/**
  * Liste chanson Navigation
  */
-
 const createListNavigator = createStackNavigator({
     ListeArtiste : {
         screen : ListeArtiste,
         navigationOptions : {
-            title : 'LISITRY NY ARTISTA'
+            title : 'LISITRY NY ARTISTA',header: null,
         }
     }, 
     HiraArtista : {
@@ -63,23 +78,35 @@ const createListNavigator = createStackNavigator({
             const titre = navigation.getParam('Artiste').toUpperCase()
             return(
             {
-                header: null,
-                //title : titre 
+                header: null,  
             }     
             )
         }
     },
     HiraNote : {
         screen : HiraNote,
-        // navigationOptions : ({navigation}) => {
-        //     const titre = navigation.getParam('hira').toUpperCase()
-        //     return ({
-        //         title : titre.substring(0,14) + "...",
-        //     })
-        // }
     }
-
 })
+
+/**
+ * Favorite navigationOptions supplementaire
+ * HIDE TABBAR IN NOTE VIEW
+ * return true ou false pour la tabBar
+ */
+createListNavigator.navigationOptions = ({navigation}) => {
+    let tabBarVisible = true;
+
+    //acceder a noter nom du vue sur notre navigation
+    let routeName = navigation.state.routes[navigation.state.index].routeName
+
+    if ( routeName == 'HiraNote' || routeName == 'HiraArtista' ) {
+        tabBarVisible = false
+    }
+    return {
+        tabBarVisible,
+    }
+}
+
 
 /**
  * Hira rehetra vue
@@ -88,7 +115,7 @@ const createHiraRehetraNavigator = createStackNavigator({
     HiraRehetra : {
         screen : HiraRehetra,
         navigationOptions : {
-            title : 'LISITRY NY HIRA'
+            title : 'LISITRY NY HIRA',header: null,
         }
     }, 
     HiraNote : {
@@ -102,7 +129,7 @@ const createHiraRehetraNavigator = createStackNavigator({
 /*
     TAB NAVIGATOR
 */
-const createTabNav = createBottomTabNavigator({
+const createTabNav = createMaterialTopTabNavigator({
 
     Acceuil : {
         screen : createSearchNavigator, 
@@ -110,7 +137,8 @@ const createTabNav = createBottomTabNavigator({
             tabBarIcon : () => {
                 return (<Image source= {require('../images/Icon/Acceuil.png')}  style = {styles.image} />)
             }, 
-            title : 'Tongasoa'
+            title : 'FARANY',
+           
         }
     },
 
@@ -130,7 +158,8 @@ const createTabNav = createBottomTabNavigator({
             tabBarIcon : () => {
                 return (<Image source= {require('../images/Icon/list.png')}  style = {styles.image} />)
             }, 
-           title : 'Lisitra'
+           title : 'Artista',
+           
         }
     },
 
@@ -140,16 +169,21 @@ const createTabNav = createBottomTabNavigator({
             tabBarIcon : () => {
                 return (<Image source= {require('../images/Icon/ic_search.png')}  style = {styles.image} />)
             }, 
-           title : 'Lisitra'
+           title : 'Lisitra',
+           
         }
     }
 },
 {
     tabBarOptions : {
-        showLabel : false,
-        showIcon : true,
-        activeBackgroundColor : '#2B3E72' ,
-        inactiveBackgroundColor : '#3F5AA6'
+        showLabel : true,
+        showIcon : false,
+        style : {
+            backgroundColor : '#302C2A'
+        }, 
+        labelStyle : {
+            fontFamily : "Poppins-Regular"
+        }
     }
 }
 )
@@ -161,5 +195,6 @@ const styles = StyleSheet.create({
         resizeMode : 'center'
     }
 })
+
 
 export default createAppContainer(createTabNav)

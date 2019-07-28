@@ -9,6 +9,7 @@ export default class HiraArtisteWithImage extends Component {
     constructor(props){
         super(props)
         this.id = this.props.idArtiste
+        this.nb = dbQueryArtisteChant(this.id).length
     }
 
     /**
@@ -18,7 +19,7 @@ export default class HiraArtisteWithImage extends Component {
      <Text style = {styles.nbHira}>Isan'ny hira : {dbQueryArtisteChant(this.id).length}</Text>
      */
     onClick(){
-        this.props.navigation.navigate("HiraArtista", {hira : dbQueryArtisteChant(this.id), Artiste : this.props.artiste})  
+        this.props.navigation.navigate("HiraArtista", {hira : dbQueryArtisteChant(this.id), Artiste : this.props.artiste, Isa : this.nb })  
     }
          
     /**
@@ -31,7 +32,7 @@ export default class HiraArtisteWithImage extends Component {
                 <MaterialIcons name = 'group' size = {60} color = "#2B3E72" />
                 <View style = {styles.content}>
                     <Text style = {styles.artiste}>{this.props.artiste}</Text>
-                    <Text style = {styles.nbHira}>Isan'ny hira : {dbQueryArtisteChant(this.id).length}</Text>
+                    <Text style = {styles.nbHira}>Isan'ny hira : {this.nb}</Text>
                 </View>
             </TouchableOpacity>
         )

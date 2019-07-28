@@ -29,6 +29,8 @@ Isaorana ny nandray anjara rehetra
         })
     }
 
+    
+
     /**
      * render
      *  <AcceuilHiraFarany image={require('../images/Mpanakanto/icon.png')} artiste = "Lola" vue = {this.props.navigation} 
@@ -68,7 +70,7 @@ Isaorana ny nandray anjara rehetra
                 </View>
 
                 <View style = {styles.favoriteContainer}>
-                    <Text style = {styles.hiraFarany}>Ireo hira nosafidinao</Text>
+                    <Text style = {[styles.hiraFarany]}>Ireo hira nosafidinao</Text>
                     <ScrollView showsVerticalScrollIndicator = {false}>
                         <FlatList 
                             data = {this.props.favoriteChant.slice(0,10)}
@@ -95,8 +97,7 @@ const styles = StyleSheet.create({
     }, 
     hiraFarany : {
         fontSize : 30,
-        fontWeight : "900",
-        
+        fontFamily : 'Poppins-SemiBold',
         color : '#3F5AA6'
     }, 
     historicContainer : {

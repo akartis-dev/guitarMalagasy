@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, ScrollView, FlatList, View, Dimensions, Animated } from 'react-native'
+import { Text, StyleSheet, View, Dimensions, Animated, TouchableOpacity } from 'react-native'
 import HiraArtisteView from './Composition/HiraArtisteView'
 import { connect } from 'react-redux'
+import {OptimizedFlatList} from 'react-native-optimized-flatlist'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const HEADER_MAX_HEIGHT = Math.round(Dimensions.get("window").height / 3)
+const HEADER_MAX_HEIGHT = Dimensions.get('window').height / 3
 const HEADER_MIN_HEIGHT = 50
 const HEADER_SCROLL = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT
 
@@ -17,6 +19,7 @@ class HiraArtista extends Component {
             reload : null,
             scrollY : new Animated.Value(0)
         }
+        this.nb = this.props.navigation.state.params.Isa
     }
 
     /**
@@ -36,28 +39,42 @@ class HiraArtista extends Component {
      * FlatList renderItem
      */
     renderItem = ({item}) => <HiraArtisteView 
-    id = {item.idHira} //id anle hira
-    artiste = {this.artiste} //nom artiste mihira an'ilay hira
-    hira = {item.titreHira} //titre hira
-    navigation = {this.props.navigation}
-    isFavorite = {this.isFavorite}
+        id = {item.idHira} //id anle hira
+        artiste = {this.artiste} //nom artiste mihira an'ilay hira
+        hira = {item.titreHira} //titre hira
+        navigation = {this.props.navigation}
+        isFavorite = {this.isFavorite}
     />
 
     /**
      * Flatlist pour le rendu
+     * initialNumToRender = {5}
+        maxToRenderPerBatch = {10}
      */
     _listData(){
         return(
             <View style = {{marginTop : HEADER_MAX_HEIGHT}}>
-                <FlatList 
+                <OptimizedFlatList 
                     data = {this.listeHira}
                     extraData = {this.props.favoriteChant}
                     keyExtractor = {(item) => item.idHira.toString()}
                     renderItem = { this.renderItem }
-                    initialNumToRender = {5}
-                    maxToRenderPerBatch = {10}
                     />
             </View>
+        )
+    }
+
+    /**
+     * return button
+     */
+    returnButton(){
+        return(
+            <TouchableOpacity onPress = {() => {
+                this.props.navigation.goBack(null)
+                return true
+                } }>
+                 <MaterialIcons name = 'keyboard-arrow-left' size = {45} color = "black" />
+            </TouchableOpacity>
         )
     }
 
@@ -67,49 +84,102 @@ class HiraArtista extends Component {
 
     render() {
 
+        /**
+         * Animation de notre scroll, deplacement de notre header vers le haut
+         */
         const scrollAnimated = this.state.scrollY.interpolate({
             inputRange : [0, HEADER_SCROLL],
-            outputRange : [HEADER_MAX_HEIGHT, HEADER_MIN_HEIGHT],
-            extrapolate : 'clamp'
-        })
-
-        const translate = this.state.scrollY.interpolate({
-            inputRange : [0, HEADER_SCROLL],
-            outputRange : [0, -50],
-            extrapolate : 'clamp'
-        })
-
-        const opacity = this.state.scrollY.interpolate({
-            inputRange : [0, HEADER_MAX_HEIGHT / 2, HEADER_MAX_HEIGHT],
-            outputRange : [1,1,0],
-            extrapolate : 'clamp'
-        })
-
-        const opacityTexte = this.state.scrollY.interpolate({
-            inputRange : [0, HEADER_MAX_HEIGHT / 2, HEADER_MAX_HEIGHT],
-            outputRange : [0,0,1],
-            extrapolate : 'clamp'
+            outputRange : [0, - (HEADER_SCROLL) ],
+            extrapolate : 'clamp', 
+            //useNativeDriver: true
         })
 
         /**
-         * 
+         * Mis en place du texte sur le head bar a la fin du scroll
          */
+        const textAnimated = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_SCROLL],
+            outputRange : [0, (HEADER_SCROLL - HEADER_MAX_HEIGHT / 3) + 8],
+            extrapolate : 'clamp', 
+            
+        })
+
+        /**
+         * Deplacement de l'image en fonction du scroll
+         */
+        const translate = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_SCROLL],
+            outputRange : [0, HEADER_MAX_HEIGHT],
+            extrapolate : 'clamp',
+            
+        })
+
+        /**
+         * Opacite de l'image suivant le scroll
+         */
+        const opacity = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_MAX_HEIGHT / 2],
+            outputRange : [1,0],
+            extrapolate : 'clamp',
+            
+        })
+
+        /**
+         * Opacite du texte suivant le scroll
+         */
+        const opacityTexte = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_MAX_HEIGHT / 2],
+            outputRange : [1,0],
+            extrapolate : 'clamp',   
+        })
+
+        const centerText = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_SCROLL],
+            outputRange : [0, (Dimensions.get('window').width / 4) ],
+            extrapolate : 'clamp',  
+        })
+
+        /**
+         * pour le bouton retourn
+         */
+        const retournPosition = this.state.scrollY.interpolate({
+            inputRange : [0, HEADER_SCROLL], 
+            outputRange : [0, HEADER_SCROLL - 5],
+            extrapolate : 'clamp'
+        })
 
         return (
             <View style = {styles.container}>
 
-                <ScrollView onScroll = {Animated.event( [{nativeEvent : {contentOffset : {y : this.state.scrollY}}}] )}>
+                <Animated.ScrollView onScroll = {Animated.event( [{nativeEvent : {contentOffset : {y : this.state.scrollY }}}], 
+                     {useNativeDriver: true})}    
+                >
                     {this._listData()}
-                </ScrollView>
+                </Animated.ScrollView>
 
-                <Animated.View style = {[styles.header, {height : scrollAnimated }]}>
-                    <Animated.Image 
-                            style = {[ styles.imageArtiste, {opacity : opacity,transform : [{translateY : translate}]} ]}
-                            source = {require('../images/Mpanakanto/alainfarakely.jpg')}
-                        />
-                     <Animated.View style = {[styles.bar, {opacity : opacityTexte}]}>
-                        <Text style = {styles.artiste}>{this.artiste.toUpperCase()}</Text>
+                <Animated.View style = {[styles.header , {transform : [{translateY : scrollAnimated}]}]}>
+
+                    <Animated.View style = {[styles.bar]}>
+
+                        <Animated.Text style = {[styles.artiste, 
+                            {transform : [{translateY : textAnimated}, {translateX : centerText}]}, 
+                            ]} >
+                            {this.artiste.toUpperCase()}
+                        </Animated.Text>
+
+                        <Animated.Text style = {[styles.nbHira, {opacity : opacityTexte}]}>Hira {this.nb}</Animated.Text>
+
                     </Animated.View>
+
+                    <Animated.Image 
+                        style = {[ styles.imageArtiste, {opacity : opacity, transform : [{translateY : translate}] } ]}
+                        source = {require('../images/Mpanakanto/alainfarakely.jpg')}
+                    />
+
+                    <Animated.View style = {[styles.retourButton, {transform : [{translateY : retournPosition}]}]}>
+                        {this.returnButton()}
+                    </Animated.View>
+
                 </Animated.View>
             </View>
         )
@@ -127,35 +197,47 @@ export default connect(mapStateToProps)(HiraArtista)
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        backgroundColor : '#FAFBFF'
+        backgroundColor : '#F5F2F0'
     }, 
     header : {
-        position : 'absolute',
+        position: 'absolute',
         top : 0,
         left : 0,
         right : 0,
-        backgroundColor : 'white',
         overflow : 'hidden',
-        
+        borderBottomWidth : 2,
+        borderBottomColor : '#F5F2F0'
     }, 
     imageArtiste : {
         position : 'absolute',
-        height : HEADER_MAX_HEIGHT,
-        width : null,
+        height : 75,
+        width : 75,
         resizeMode : 'cover',
-        top : 0,
-        left : 0,
-        right : 0
+        borderRadius : 75,
+        right : 25,
+        top : HEADER_MAX_HEIGHT / 3,
+        
     }, 
     bar : {
         height : HEADER_MAX_HEIGHT,
-        alignItems : 'center'
+        backgroundColor : '#F5F2F0',
     },
     artiste : {
         fontSize : 30,
-        fontWeight :  '700',
+        fontFamily : "Poppins-SemiBold",
         color : 'black',
-        marginTop : 10
+        marginLeft : 20,
+        marginTop : HEADER_MAX_HEIGHT / 3
+    },
+    nbHira : {
+        fontSize : 20,
+        fontFamily : "Poppins-Light",
+        marginLeft : 25,
+    }, 
+    retourButton : {
+        position : 'absolute',
+        top : 10,
+
     }
 
 })

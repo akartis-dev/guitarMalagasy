@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default class HiraArtisteView extends Component {
 
@@ -9,6 +10,7 @@ export default class HiraArtisteView extends Component {
         this.id = this.props.id
         this.artiste = this.props.artiste
         this.isFavorite = this.props.isFavorite
+        
     }
 
     onClick(){
@@ -25,9 +27,9 @@ export default class HiraArtisteView extends Component {
     render() {
         return (
             <TouchableOpacity style = {styles.container} onPress = {() => this.onClick()} activeOpacity = {0.7}>
-                <Image source = {require('../../images/Icon/play.png')} style = {styles.images}/>
-                {this.renderFavoriteImage()}
                 <Text style = {styles.titreHira}> {this.hira} </Text>
+                {this.renderFavoriteImage()}
+                <MaterialIcons name = 'keyboard-arrow-right' size = {45} color = "#707070" />
             </TouchableOpacity>
         )
     }
@@ -36,33 +38,28 @@ export default class HiraArtisteView extends Component {
 const styles = StyleSheet.create({
     container : {
         flexDirection : 'row',
-        height : 40,
+        height : 50,
         margin : 5,
         marginTop : 5,
         marginBottom : 0,
         backgroundColor : 'white',
         borderWidth : 2,
-        borderRadius : 10,
-        borderColor : '#EBEEF7',
+        borderRadius : 3,
+        borderColor : 'white',
+        justifyContent : 'center',
+        alignItems : 'center'
     }, 
-    images : {
-        width : 30,
-        height : 30,
-        margin : 5,
-        marginTop : 3,
-        resizeMode : 'center'
-    },
+   
     imagesFavorite : {
         width : 20,
         height : 20,
-        marginTop: 3,
         resizeMode : 'center',
         justifyContent : 'center'
     },
     titreHira : {
         flex : 1,
-        textAlign : 'center',
-        fontSize : 30,
-        color : '#3F5AA6'
+        fontSize : 25,
+        color : '#707070',
+        fontFamily : 'Poppins-Light'
     }
 })

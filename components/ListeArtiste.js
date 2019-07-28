@@ -68,16 +68,6 @@ export default class ListeArtiste extends Component {
                             idArtiste = {item.id}
                             navigation = {this.props.navigation}
                             />}
-                        onEndReachedThreshold = {0.5}
-                        onEndReached = {() => {
-                            // this.dataDebut = this.dataFin
-                            // this.dataFin += 20
-                            // if(this.dataFin < this.totalData){
-                            //     this.loadData(this.dataDebut, this.dataFin)
-                            // }else{
-                            //     this.loadData(this.dataDebut, this.totalData)
-                            // }
-                        }}
                     />
                 </ScrollView>
                 {this.disableLoading()}
