@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     nbHira : {
         fontSize : 20,
         fontFamily : "Poppins-Light",
-        marginLeft : 25,
+        marginLeft : 20,
     }, 
     retourButton : {
         position : 'absolute',

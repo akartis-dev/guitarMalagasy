@@ -21,8 +21,29 @@ const createSearchNavigator = createStackNavigator({
     }, 
     HiraNote : {
         screen : HiraNote,
+        navigationOptions : {
+            header : null
+        }
     }
 })
+
+/**
+ * Enlever les tabNavigator du vue Hira Note
+ */
+
+createSearchNavigator.navigationOptions = ({navigation}) => {
+    let tabBarVisible = true;
+
+    //acceder a noter nom du vue sur notre navigation
+    let routeName = navigation.state.routes[navigation.state.index].routeName
+
+    if ( routeName == 'HiraNote') {
+        tabBarVisible = false
+    }
+    return {
+        tabBarVisible,
+    }
+}
 
 /**
  * Favorite Navigation
@@ -38,7 +59,9 @@ const createFavoriteNavigator = createStackNavigator({
     }, 
     HiraNote : {
         screen : HiraNote,
-        
+        navigationOptions : {
+            header : null
+        }
     }
 })
 
@@ -60,6 +83,7 @@ createFavoriteNavigator.navigationOptions = ({navigation}) => {
         tabBarVisible,
     }
 }
+
 
 
 /**
@@ -85,6 +109,9 @@ const createListNavigator = createStackNavigator({
     },
     HiraNote : {
         screen : HiraNote,
+        navigationOptions : {
+            header : null
+        }
     }
 })
 
@@ -120,11 +147,26 @@ const createHiraRehetraNavigator = createStackNavigator({
     }, 
     HiraNote : {
         screen : HiraNote,
-        // navigationOptions : {
-        //     title : "HIRA MALAGASY"
-        // }
+        navigationOptions : {
+            header : null
+        }
     }
 })
+
+createHiraRehetraNavigator.navigationOptions = ({navigation}) => {
+    let tabBarVisible = true;
+
+    //acceder a noter nom du vue sur notre navigation
+    let routeName = navigation.state.routes[navigation.state.index].routeName
+
+    if ( routeName == 'HiraNote') {
+        tabBarVisible = false
+    }
+    return {
+        tabBarVisible,
+    }
+}
+
 
 /*
     TAB NAVIGATOR

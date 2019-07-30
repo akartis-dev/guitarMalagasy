@@ -1,51 +1,55 @@
 export default note = 
 `
-Cm                     Cm            G#
- Toa tsy_haritro ihany,  ny hiandry anao 
-  G               
+<t>
+<pre>
+<font class="note">Cm                     Cm            G#</font>
+Toa tsy_haritro ihany,  ny hiandry anao 
+<font class="note">G               </font>
 Niezaka ihany aho fa toa 
 Cm             Cm            G#
- Ho mafy ihany, tsy ho eo ianao 
-    G                     G#  
+Ho mafy ihany, tsy ho eo ianao 
+<font class="note">G                     G#  </font>
 Ho rava ve reo zay efa natao
-     Bb                                G#
+<font class="note">Bb                                G#</font>
 Tsy maintsy mbola hihaona indray andro_any 
-  Bb   
+<font class="note">Bb   </font>
 'zaho kosa hiteny hoe 
 
-               Cm
-     Tsy andrinao
-            G#
-     Tsy_ho_kivy aho anefa
-            Bb                       Cm
-     Tsy hitàna anao akory aho mandehana
-            G#  
-     Tsy_ho_ahy intsony ny fonao
-       Bb                            Cm...
-     Aleo aloha samy haka ho azy indray 
+<font class="note">Cm</font>
+Tsy andrinao
+<font class="note">G#</font>
+Tsy_ho_kivy aho anefa
+<font class="note">Bb                       Cm</font>
+Tsy hitàna anao akory aho mandehana
+<font class="note">G#  </font>
+Tsy_ho_ahy intsony ny fonao
+<font class="note">Bb                            Cm...</font>
+Aleo aloha samy haka ho azy indray 
 
-Cm                  Cm          G#
- 'Zaho koa nino, ho eo foana ianao 
-    G#                      G             
+<font class="note">Cm                  Cm          G#</font>
+'Zaho koa nino, ho eo foana ianao 
+<font class="note">G#                      G             </font>
 Indrisy fo vaky, sento sisa iny lasa ianao  
-Cm                Cm             G#
- Tsy alaelo ihany  na koa hoe tomany 
-    G                           G#  
+<font class="note">Cm                Cm             G#</font>
+Tsy alaelo ihany  na koa hoe tomany 
+<font class="note">G                           G#  </font>
 F’izaho anefa mbola hitraka hatrany
-    Bb                        G#
+<font class="note">Bb                        G#</font>
 Ny momba anao koa efa lavitra ahy 
-   Bb   
+<font class="note">Bb   </font>
 Taraina sisa ny ahy hoé
 
-     Fiverenana (2x)
-               Cm
-     Tsy andrinao
-             G#
-     Tsy_ho_kivy aho anefa
-            Bb                       Cm
-     Tsy hitàna anao akory aho mandehana
-            G#  
-     Tsy_ho_ahy intsony ny fonao
-       Bb                            Cm...
-     Aleo aloha samy haka ho azy indray
+       Fiverenana (2x)
+       <font class="note">Cm</font>
+       Tsy andrinao
+       <font class="note">G#</font>
+       Tsy_ho_kivy aho anefa
+       <font class="note">Bb                       Cm</font>
+       Tsy hitàna anao akory aho mandehana
+       <font class="note">G#  </font>
+       Tsy_ho_ahy intsony ny fonao
+       <font class="note">Bb                            Cm...</font>
+       Aleo aloha samy haka ho azy indray
+</pre>
+</t>
 `

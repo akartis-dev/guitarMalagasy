@@ -8,7 +8,9 @@ import { YellowBox } from 'react-native';
 
 export default class App extends Component {
   render() {
+
     YellowBox.ignoreWarnings(['ViewPagerAndroid']);
+
     let persistor = persistStore(Store)
     //persistor.purge()
     return (
