@@ -1,79 +1,12 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native'
 import {dbQueryArtisteSong} from '../Database/dbQueryArtisteSong'
 import { MaterialHeaderButtons, Item } from '../Navigation/Header'
 import { connect } from 'react-redux'
 import Store from '../Store/configureStore'
 import { queryChantDetailWithId } from '../Database/dbQuery'
-
-/**
- * Definir une class qui va gerer notre vue avec le changement de style
- * 
- */
-class HeaderButton extends Component{
-    
-    constructor(props){
-        super(props)
-        this.state = {
-            state : null
-        }
-    }
-
-    /**
-     * Ajouter au favorie
-     */
-    addFavorite(){
-        const action = {type : "toogleFavorite", value : HiraId}
-        Store.dispatch(action)
-        this.forceUpdate()
-    }
-
-    /*
-     * recuperation de notre store
-     */
-    saveStore(){
-        return state = Store.getState()
-    }
-
-    /**
-     * verifie si notre chanson est deja dans la liste, si oui, on change la couleur du coeur
-     */
-
-     isFavorite(){
-         if(SharedDataClass.favorie){
-            return <Item title="Favorite" iconName="favorite" onPress={() => this.addFavorite() } />
-         }else{
-            return <Item title="Favorite" iconName="favorite-border" onPress={() => this.addFavorite() } />
-         }
-     }
-
-     /**
-      * Reduit la police
-      */
-     reduceFontSize(){
-         const action = {type : "REDUCE_FONT", value : ''}
-         Store.dispatch(action)
-     }
-     
-    increaseFontSize(){
-        const action = {type : "INCREASE_FONT", value : ''}
-        Store.dispatch(action)
-    }
-
-    /**
-     * Rendu de notre application
-     */
-    render(){
-        //console.warn(this.saveStore())
-        return(
-            <MaterialHeaderButtons>
-                <Item title="downFont" iconName="arrow-downward" onPress={() => this.reduceFontSize()} />
-                <Item title="upFont" iconName="arrow-upward" onPress={() => this.increaseFontSize() } />
-                {this.isFavorite()}
-            </MaterialHeaderButtons>
-        )
-    }
-}
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import HTML from 'react-native-render-html';
 
 /**
  * Object globale contenant les details du chansons a ajouter ou a supprimer de notre redux
@@ -81,7 +14,6 @@ class HeaderButton extends Component{
  */
 let HiraId = {} 
 let SharedDataClass = {}
-let titre
 
 /**
  * Rendu normal de notre application
@@ -96,26 +28,10 @@ class HiraNote extends Component {
         super(props)
         this.idHira = this.props.navigation.state.params.idHira
         this.detail = this.loadChantDetail()
-        this.props.navigation.setParams({title : ((this.detail.titre).substring(0,10) + '...').toUpperCase()})
-    }
-
-    /**
-     * affichage des icons pour notre navigation
-     */
-    static navigationOptions = ({navigation}) => {
-        return(
-            {
-                title : navigation.state.params.title === undefined ? 'NAOTY' : navigation.state.params.title ,
-                headerRight: <HeaderButton />
-            }
-        )
+        
     }
 
     componentDidMount(){
-        
-        //console.warn(this.detail)
-        HiraId = {id : this.idHira, hira : this.detail.titre, artiste : this.detail.artiste}
-        // HiraId = {id : this.idHira, hira : this.hira, artiste : this.artiste}
         this.dispatchLastSong()
     }
 
@@ -132,6 +48,14 @@ class HiraNote extends Component {
     }
 
     /**
+     * Ajouter ou supprimer des favories
+     */
+    addFavorite(){
+        const action = {type : "toogleFavorite", value : {id : this.idHira, hira : this.detail.titre, artiste : this.detail.artiste}}
+        this.props.dispatch(action)      
+    }
+
+    /**
      * Verifie si notre chanson qu'on vient d'ouvrir est dans la favorie ou non, 
      * Si oui, on return true
      * Si non, on return false 
@@ -142,25 +66,74 @@ class HiraNote extends Component {
         // isFavorite = -1
         if(isFavorite === -1){
             //on pas deja
-            SharedDataClass = {favorie : false}
+            return(
+                    <MaterialIcons name = 'favorite' size = {45} color = "#A8A8A8"/>
+               
+            )
         }else{
-            SharedDataClass = {favorie : true}
+            return(
+                    <MaterialIcons name = 'favorite' size = {45} color = "#DAA452"/>
+                
+            )
         }
     }
 
     /**
+     * Bouton retour
+     */
+    returnButton(){
+        this.props.navigation.goBack(null)
+        return true
+    }
+
+    /**
      * Methode rendu
-     *  
+     *   <Text style = {[styles.note, {fontSize : this.props.fontSize}]}> {dbQueryArtisteSong(this.idHira).default}</Text>
+     * renderers = {
+                        {
+                            //utilisation du custom font pour modifier le contenu general de notre html
+                            t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
+                                style = {{ fontSize : 15, color : '#DAA452'}}>
+                                {children}
+                            </Text>,
+                        }
+                        }
+
      */
     render() {
-        this.checkFavorite()
+        
         return (
             <View style = {styles.container}>
+                <View style = {styles.headBar}>
+                        <Text style = {styles.titreHira}>{this.detail.titre}</Text>
+                        <Text style = {styles.artiste}>{this.detail.artiste}</Text>
+                        <TouchableOpacity  style = {styles.favorite} onPress = {() => this.addFavorite()} >
+                            {this.checkFavorite()}
+                        </TouchableOpacity>
+
+                        <TouchableOpacity  style = {styles.returnButton} onPress = {() => this.returnButton()} >
+                            <MaterialIcons name = 'keyboard-arrow-left' size = {45} color = "black" />
+                        </TouchableOpacity>
+                </View>
                 <ScrollView 
                 	style = {styles.noteContainer}
                     showsVerticalScrollIndicator = {false}
                     >
-                   <Text style = {{fontSize : this.props.fontSize}}> {dbQueryArtisteSong(this.idHira).default}</Text>
+                  
+                   <HTML 
+                        renderers = {
+                        {
+                            //utilisation du custom font pour modifier le contenu general de notre html
+                            t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
+                                style = {{ fontSize : 17}}>
+                               {children}
+                            </Text>,
+                        }
+                        }
+                        baseFontStyle = {{fontFamily : 'Poppins-Light' }}
+                        classesStyles = { {note : { color : '#DAA452'}} }
+                        html = {dbQueryArtisteSong(this.idHira).default} 
+                    />
                 </ScrollView>
             </View>
         )
@@ -178,7 +151,8 @@ export default connect(mapStateToProps)(HiraNote)
 
 const styles = StyleSheet.create({
     container : {
-        flex: 1
+        flex: 1,
+        backgroundColor : '#F5F2F0'
     }, 
     noteContainer : {
     	margin : 10,
@@ -187,7 +161,33 @@ const styles = StyleSheet.create({
     },
     note : {
     	color : '#828899',
-    	fontSize : 20
+        fontSize : 20,
+        fontFamily :  "Poppins-Regular"
+    }, 
+    headBar : {
+        alignItems : 'center',
+        height : 70,
+        borderBottomWidth : 2,
+        borderBottomColor :"#E8E8E8"
+        
+    }, 
+    titreHira : {
+        fontSize : 30,
+        fontFamily : "Poppins-SemiBold"
+    }, 
+    artiste : {
+        fontSize : 20,
+        fontFamily : "Poppins-Medium"
+    },
+    favorite : {
+        position : 'absolute',
+        right : 10,
+        top : 10
+    },
+    returnButton : {
+        top : 10,
+        left : 0,
+        position : 'absolute'
     }
 
 })

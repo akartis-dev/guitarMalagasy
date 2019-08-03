@@ -1,37 +1,41 @@
 export default note = 
 `
+<t>
+     <pre>
 Fampidirana
-G  D/F# A
-D  A'   G
-Em A    D
+<font class="note">G  D/F# A</font></br>
+<font class="note">D  A'   G</font></br>
+<font class="note">Em A    D</font></br>
 Tonony
-G                  A
- Ny fitiavantsika roa
-         D
+<font class="note">G                  A</font>
+Ny fitiavantsika roa
+<font class="note">D</font>
 Kanto tokoa
-G               A
- Nofinofy mamy soa
-            D
+<font class="note">G               A</font>
+Nofinofy mamy soa
+<font class="note">D</font>
 Tsy mba ho lo
-G               A
- Embona mameno fo
-      D                A
+<font class="note">G               A</font>
+Embona mameno fo
+<font class="note">D                A</font>
 Tsisy ahiahy, mety hampanahy
-Bm          A         G
- Ny androntsika hatramin’izao
-A                 D
- Tanana tsy mifandao
+<font class="note">Bm          A         G</font>
+Ny androntsika hatramin’izao
+<font class="note">A                 D</font>
+Tanana tsy mifandao
 
      Fiverenana
-             Em             A
+     <font class="note">Em             A</font>
      Aina miray, tsy vaky ilay
-                   D            
+     <font class="note">D            </font>
      Toa ‘ty sy ‘nday
-              Em           A
+     <font class="note">Em           A</font>
      Lakam-pitia, fo mifangia
-            D
+     <font class="note">D</font>
      Miara-dia
 
 Fampidirana/Tonony
-     Fiverenana (2x)
+Fiverenana (2x)
+     </pre>
+</t>
 `

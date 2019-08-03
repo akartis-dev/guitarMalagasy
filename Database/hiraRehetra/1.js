@@ -1,90 +1,103 @@
 export default note = 
 `
-Tonony 1
-G              D/F#
-..Fitia tsy vorindra 
-     Em             Bm
-Tsy nety hafana ny fo 
-   C                A
-Nikasa hifindra, hanova famindra 
-G'              Em'
-..Fa mba te ho soa 
-     Am
-Efa leo ny mihafy 
-D               C      G
-..Fa tratry ny herika mafy 
+<t>
+TONONY 1<br>
+<font class="note">G              D/F#</font><br>
+..Fitia tsy vorindra <br>
+<font class="note">Em             Bm</font><br>
+Tsy nety hafana ny fo <br>
+<font class="note">C                A</font><br>
+Nikasa hifindra, hanova famindra <br>
+<font class="note">G'              Em'</font><br>
+..Fa mba te ho soa <br>
+<font class="note">Am</font><br>
+Efa leo ny mihafy <br>
+<font class="note">D               C      G</font><br>
+..Fa tratry ny herika mafy <br>
+<br>
 
-Tonony 2
-G              D/F#
-..Ka mila hazavana 
-   Em             Bm
-Mitady ny mety kokoa 
- C                A
-Lasa tsy tana, hanavao filalao
-G'              Em'
-..Fa mba te ho soa 
-      Am
-Handositra ditra 
-D           C         G
-..Fa be ny ratra sy tritra 
+TONONY 2<br>
+<font class="note">G              D/F#</font><br>
+..Ka mila hazavana <br>
+<font class="note">Em             Bm</font><br>
+Mitady ny mety kokoa <br>
+<font class="note">C                A</font><br>
+Lasa tsy tana, hanavao filalao<br>
+<font class="note">G'              Em'</font><br>
+..Fa mba te ho soa <br>
+<font class="note">Am</font><br>
+Handositra ditra <br>
+<font class="note">D           C         G</font><br>
+..Fa be ny ratra sy tritra <br>
+<br>
 
-     Fiverenana
-                  C
+     <pre>  
+     FIVERENANA
+     <font class="note">C</font>
      Ka indro ny tanako 
-     D/F#           C           
+     <font class="note">D/F#           C           </font>
      ..Hanome ny anjarako 
-     B              Em
+     <font class="note">B              Em</font>
      ..Hanoro, ankahery 
-     G                   C
+     <font class="note">G                   C</font>
      ..Ny havia sy ny havanako 
-     D/F#           C 
+     <font class="note">D/F#           C </font>
      ..Hamihina ny havako 
-     B                 Em  Dm
+     <font class="note">B                 Em  Dm</font>
      ..Raha sendra ka very 
+     </pre>
 
-Tetezana
-C..D/F#..,C..B..
-Em.. G-D-C
+<br>
+TETEZANA<br>
+<font class="note">C..D/F#..,C..B..</font><br>
+<font class="note">Em.. G-D-C</font><br>
+<br>
 
-Tonony 3
-G              D/F#
-..Koa aza sondrina 
-    Em          Bm
-Ho lavitra ny aleha 
-  C                 A
-Ahazo ny irina, ho sendra ny tiana 
-G'                 Em'
-..Fa ny tsiny efa be 
-      Am
-Mahitsia ,mahereza 
-D         C        G
-..Enga anie mba hateza
+TONONY 3<br>
+<font class="note">G              D/F#</font><br>
+..Koa aza sondrina <br>
+<font class="note">Em          Bm</font><br>
+Ho lavitra ny aleha <br>
+<font class="note">C                 A</font><br>
+Ahazo ny irina, ho sendra ny tiana <br>
+<font class="note">G'                 Em'</font><br>
+..Fa ny tsiny efa be <br>
+<font class="note">Am</font><br>
+Mahitsia ,mahereza <br>
+<font class="note">D         C        G</font><br>
+..Enga anie mba hateza<br>
+<br>
 
-Tetezana
-             C
-Izaho tsy havanana 
-D/F#           C 
-..Raha toa ka resaka 
-B            Em
-..Ahasahirankirana 
-G                  C
-..Raha kosa ka fitiavana 
-D/F#           C 
-..Dia ananako betsaka 
-B             Em
-..Azo hivalamparana 
+TETEZANA<br>
+<font class="note">C</font><br>
+Izaho tsy havanana <br>
+<font class="note">D/F#           C </font><br>
+..Raha toa ka resaka <br>
+<font class="note">B            Em</font><br>
+..Ahasahirankirana <br>
+<font class="note">G                  C</font><br>
+..Raha kosa ka fitiavana <br>
+<font class="note">D/F#           C </font><br>
+..Dia ananako betsaka <br>
+<font class="note">B             Em</font><br>
+..Azo hivalamparana <br>
+<br>
 
-     Fiverenana (2x)
-     G              C
+<pre>
+     FIVERENANA (2x)
+     <font class="note">G              C</font>
      ..Ka indro ny tanako 
-     D/F#           C 
+     <font class="note">D/F#           C </font>
      ..Hanome ny anjarako 
-     B              Em
+     <font class="note">B              Em</font>
      ..Hanoro, ankahery 
-     G                   C
+     <font class="note">G                   C</font>
      ..Ny havia sy ny havanako 
-     D/F#           C 
+     <font class="note">D/F#           C </font>
      ..Hamihina ny havako 
-     B                 Em 
+     <font class="note">B                 Em </font>
      ..Raha sendra ka very
+</pre>
+
+</t>
 `
