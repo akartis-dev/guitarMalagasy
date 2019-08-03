@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { Text, StyleSheet, Image,  } from 'react-native'
 
+import ListStyle from '../ReUseComponent/ListStyle'
 export default class HiraArtisteView extends Component {
 
     constructor(props){
@@ -10,7 +10,9 @@ export default class HiraArtisteView extends Component {
         this.id = this.props.id
         this.artiste = this.props.artiste
         this.isFavorite = this.props.isFavorite
-        
+
+        //bind function
+        this.onClick = this.onClick.bind(this)
     }
 
     onClick(){
@@ -19,47 +21,37 @@ export default class HiraArtisteView extends Component {
 
     renderFavoriteImage(){
         if(this.isFavorite(this.id)){
-            return <Image source = {require('../../images/Icon/favoriteBlack.png')} style = {styles.imagesFavorite}/>
+            return <Image source = {require('../../images/Icon/favoriteBlack.png')} style = {styles.imagesFavorite} />
         }
     }
 
     
     render() {
         return (
-            <TouchableOpacity style = {styles.container} onPress = {() => this.onClick()} activeOpacity = {0.7}>
+            <ListStyle onPress = {this.onClick}>
                 <Text style = {styles.titreHira}> {this.hira} </Text>
                 {this.renderFavoriteImage()}
-                <MaterialIcons name = 'keyboard-arrow-right' size = {45} color = "#707070" />
-            </TouchableOpacity>
+            </ListStyle>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flexDirection : 'row',
-        height : 50,
-        margin : 5,
-        marginTop : 5,
-        marginBottom : 0,
-        backgroundColor : 'white',
-        borderWidth : 2,
-        borderRadius : 3,
-        borderColor : 'white',
-        justifyContent : 'center',
-        alignItems : 'center'
-    }, 
    
     imagesFavorite : {
-        width : 20,
-        height : 20,
+        position : 'absolute',
+        right : 50,
+        top : 15,
+        width : 25,
+        height : 25,
         resizeMode : 'center',
-        justifyContent : 'center'
+        opacity : 0.6
     },
     titreHira : {
         flex : 1,
         fontSize : 25,
         color : '#707070',
-        fontFamily : 'Poppins-Light'
+        fontFamily : 'Poppins-Light',
+        marginTop : 15
     }
 })

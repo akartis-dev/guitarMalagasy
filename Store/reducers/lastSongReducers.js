@@ -10,15 +10,15 @@ export default function lastSongReducers(state = init, action){
             if(isLast === -1){
                 //si on l'a pas encore dans notre tableau on ajoute, si il est deja dans le tableau on ne fais rien
                 //notre tableau doit contenir que 5 element
-                if(state.lastSong.length > 7){
-                    state.lastSong.length = 7
+                if(state.lastSong.length > 15){
+                    state.lastSong.length = 15
                 }
                 nextState = {
                     ...state,
                     lastSong : [action.value, ...state.lastSong]
                 }
-                if(nextState.lastSong.length > 7){
-                    nextState.lastSong.length = 7
+                if(nextState.lastSong.length > 15){
+                    nextState.lastSong.length = 15
                 }
             }
             return nextState || state

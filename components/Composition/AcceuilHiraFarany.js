@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
+import ListStyle from '../ReUseComponent/ListStyle'
 
 // VUE POUR AFFICHER LES CHANTS RECENTS SUR NOTRE ACCEUIL
 
@@ -9,6 +10,9 @@ class AcceuilHiraFarany extends React.Component{
         super(props)
         this.navigation = this.props.vue
         this.titreHira = this.props.titreHira
+
+        //bind function
+        this.onClick = this.onClick.bind(this)
     }
 
     titreHiraSub(a,b){
@@ -23,39 +27,33 @@ class AcceuilHiraFarany extends React.Component{
 
     render(){
         return(
-            <TouchableOpacity  style = {styles.imageHira} onPress = {() => this.onClick()} activeOpacity = {0.7}>
-                <Image source = {this.props.image}   
-                    style = {styles.sary}    
-                 />
-                <Text style={styles.titreHira}>{(this.titreHira)}</Text>
-                <Text style={styles.artiste}>{this.props.artiste}</Text>
-            </TouchableOpacity>
+            <ListStyle onPress = {this.onClick}>
+                <View style = {styles.container}>
+                    <Text style={styles.titreHira}>{(this.titreHira)}</Text>
+                    <Text style={styles.artiste}>{this.props.artiste}</Text>
+                </View>
+            </ListStyle>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    imageHira : {
-        flex : 1,
-        marginLeft : 5,
-        marginRight : 5
-    },
-    sary : {
-        width : 100,     
-        height : 90,
-        resizeMode : 'center',
-        borderRadius : 120,
-    }, 
+    container : {
+        //backgroundColor : 'yellow',
+        marginLeft : 10,
+        marginTop : 2
+    },  
     titreHira : {
-        flex : 1,
-        fontSize : 20,
-        textAlign : 'center',
-        color : '#828899'
+        fontSize : 25,
+        textAlign : 'left',
+        color : '#707070',
+        fontFamily : "Poppins-Regular"
     },
     artiste : {
         fontSize : 15,
-        textAlign : 'center',
-        color : '#828899'
+        textAlign : 'left',
+        color : '#D1D1D1',
+        fontFamily : "Poppins-Light"
     }
 })
 
