@@ -89,6 +89,16 @@ class HiraNote extends Component {
     /**
      * Methode rendu
      *   <Text style = {[styles.note, {fontSize : this.props.fontSize}]}> {dbQueryArtisteSong(this.idHira).default}</Text>
+     * renderers = {
+                        {
+                            //utilisation du custom font pour modifier le contenu general de notre html
+                            t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
+                                style = {{ fontSize : 15, color : '#DAA452'}}>
+                                {children}
+                            </Text>,
+                        }
+                        }
+
      */
     render() {
         
@@ -115,17 +125,13 @@ class HiraNote extends Component {
                         {
                             //utilisation du custom font pour modifier le contenu general de notre html
                             t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
-                                style = {{fontFamily : "Poppins-ExtraLight", fontSize : 15, color : 'black'}}>
-                                {children}
+                                style = {{ fontSize : 17}}>
+                               {children}
                             </Text>,
-                            n : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text
-                            style = {{fontFamily : "Poppins-Medium", fontSize : 15, color : '#DAA452'}}>
-                                {children}
-                            </Text>
                         }
                         }
-                        baseFontStyle = {{fontFamily : 'Poppins-Light'}}
-                        classesStyles = { {note : { color : '#DAA452'}, titre : {} } }
+                        baseFontStyle = {{fontFamily : 'Poppins-Light' }}
+                        classesStyles = { {note : { color : '#DAA452'}} }
                         html = {dbQueryArtisteSong(this.idHira).default} 
                     />
                 </ScrollView>

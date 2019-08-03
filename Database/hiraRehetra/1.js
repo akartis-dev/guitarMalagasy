@@ -1,36 +1,38 @@
 export default note = 
 `
 <t>
-<pre>
-Tonony 1
-<font class="note">G              D/F#</font>
-..Fitia tsy vorindra 
-<font class="note">Em             Bm</font>
-Tsy nety hafana ny fo 
-<font class="note">C                A</font>
-Nikasa hifindra, hanova famindra 
-<font class="note">G'              Em'</font>
-..Fa mba te ho soa 
-<font class="note">Am</font>
-Efa leo ny mihafy 
-<font class="note">D               C      G</font>
-..Fa tratry ny herika mafy 
+TONONY 1<br>
+<font class="note">G              D/F#</font><br>
+..Fitia tsy vorindra <br>
+<font class="note">Em             Bm</font><br>
+Tsy nety hafana ny fo <br>
+<font class="note">C                A</font><br>
+Nikasa hifindra, hanova famindra <br>
+<font class="note">G'              Em'</font><br>
+..Fa mba te ho soa <br>
+<font class="note">Am</font><br>
+Efa leo ny mihafy <br>
+<font class="note">D               C      G</font><br>
+..Fa tratry ny herika mafy <br>
+<br>
 
-Tonony 2
-<font class="note">G              D/F#</font>
-..Ka mila hazavana 
-<font class="note">Em             Bm</font>
-Mitady ny mety kokoa 
-<font class="note">C                A</font>
-Lasa tsy tana, hanavao filalao
-<font class="note">G'              Em'</font>
-.Fa mba te ho soa 
-<font class="note">Am</font>
-Handositra ditra 
-<font class="note">D           C         G</font>
-..Fa be ny ratra sy tritra 
+TONONY 2<br>
+<font class="note">G              D/F#</font><br>
+..Ka mila hazavana <br>
+<font class="note">Em             Bm</font><br>
+Mitady ny mety kokoa <br>
+<font class="note">C                A</font><br>
+Lasa tsy tana, hanavao filalao<br>
+<font class="note">G'              Em'</font><br>
+..Fa mba te ho soa <br>
+<font class="note">Am</font><br>
+Handositra ditra <br>
+<font class="note">D           C         G</font><br>
+..Fa be ny ratra sy tritra <br>
+<br>
 
-     Fiverenana
+     <pre>  
+     FIVERENANA
      <font class="note">C</font>
      Ka indro ny tanako 
      <font class="note">D/F#           C           </font>
@@ -43,40 +45,46 @@ Handositra ditra
      ..Hamihina ny havako 
      <font class="note">B                 Em  Dm</font>
      ..Raha sendra ka very 
+     </pre>
 
-Tetezana
-<font class="note">C..D/F#..,C..B..</font></br>
-<font class="note">Em.. G-D-C</font></br>
+<br>
+TETEZANA<br>
+<font class="note">C..D/F#..,C..B..</font><br>
+<font class="note">Em.. G-D-C</font><br>
+<br>
 
-Tonony 3
-<font class="note">G              D/F#</font>
-..Koa aza sondrina 
-<font class="note">Em          Bm</font>
-Ho lavitra ny aleha 
-<font class="note">C                 A</font>
-Ahazo ny irina, ho sendra ny tiana 
-<font class="note">G'                 Em'</font>
-..Fa ny tsiny efa be 
-<font class="note">Am</font>
-Mahitsia ,mahereza 
-<font class="note">D         C        G</font>
-..Enga anie mba hateza
+TONONY 3<br>
+<font class="note">G              D/F#</font><br>
+..Koa aza sondrina <br>
+<font class="note">Em          Bm</font><br>
+Ho lavitra ny aleha <br>
+<font class="note">C                 A</font><br>
+Ahazo ny irina, ho sendra ny tiana <br>
+<font class="note">G'                 Em'</font><br>
+..Fa ny tsiny efa be <br>
+<font class="note">Am</font><br>
+Mahitsia ,mahereza <br>
+<font class="note">D         C        G</font><br>
+..Enga anie mba hateza<br>
+<br>
 
-Tetezana
-<font class="note">C</font>
-Izaho tsy havanana 
-<font class="note">D/F#           C </font>
-..Raha toa ka resaka 
-<font class="note">B            Em</font>
-..Ahasahirankirana 
-<font class="note">G                  C</font>
-..Raha kosa ka fitiavana 
-<font class="note">D/F#           C </font>
-..Dia ananako betsaka 
-<font class="note">B             Em</font>
-..Azo hivalamparana 
+TETEZANA<br>
+<font class="note">C</font><br>
+Izaho tsy havanana <br>
+<font class="note">D/F#           C </font><br>
+..Raha toa ka resaka <br>
+<font class="note">B            Em</font><br>
+..Ahasahirankirana <br>
+<font class="note">G                  C</font><br>
+..Raha kosa ka fitiavana <br>
+<font class="note">D/F#           C </font><br>
+..Dia ananako betsaka <br>
+<font class="note">B             Em</font><br>
+..Azo hivalamparana <br>
+<br>
 
-     Fiverenana (2x)
+<pre>
+     FIVERENANA (2x)
      <font class="note">G              C</font>
      ..Ka indro ny tanako 
      <font class="note">D/F#           C </font>
@@ -90,5 +98,6 @@ Izaho tsy havanana
      <font class="note">B                 Em </font>
      ..Raha sendra ka very
 </pre>
+
 </t>
 `
