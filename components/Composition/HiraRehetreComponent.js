@@ -1,42 +1,35 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { Text, StyleSheet, View } from 'react-native'
+import StyleGlobal from '../ReUseComponent/StyleGlobal'
+import ListStyle from '../ReUseComponent/ListStyle'
 
 export default class HiraRehetreComponent extends Component {
 
     constructor(props){
         super(props)
+        this.onClick = this.onClick.bind(this)
+        this.artiste = this.props.artiste
+        
     }
 
     onClick() {
         this.props.navigation.navigate("HiraNote", {idHira : this.props.idHira})
     }
-
+//<Text style={StyleGlobal.artiste}>{this.artiste.artiste}</Text>
     render() {
         return (
-            <TouchableOpacity style={styles.container}  onPress = {() => {}} activeOpacity = {0.7} onPress = {() => this.onClick()}>
-                    <MaterialIcons name = 'library-music' size = {30} color = "#2B3E72" style = {styles.icon} />
-                    <View style ={styles.textContainer}>
-                        <Text style={styles.titre}>{this.props.titreHira}</Text>
-                    </View>
-            </TouchableOpacity>
+            <ListStyle onPress = { this.onClick }>
+                <View style = {StyleGlobal.textContainer}> 
+                    <Text style={StyleGlobal.titreHira}>{this.props.titreHira}</Text>
+                    <Text style={StyleGlobal.artiste}>{this.artiste.artiste}</Text>
+                </View>
+            </ListStyle>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flexDirection : 'row',
-        height : 40,
-        backgroundColor : 'white',
-        borderWidth : 2,
-        borderRadius : 10,
-        borderColor : '#EBEEF7',
-        marginLeft : 5,
-        marginRight : 5,
-        marginTop : 2
-
-    },
+    
     titre : {
         flex : 1,
         color: '#3F5AA6',
@@ -44,16 +37,4 @@ const styles = StyleSheet.create({
         marginTop : 2
     },
 
-    artiste : {
-        color: '#828899',
-        fontSize : 20
-    }, 
-    textContainer :{
-        flex : 1,
-        alignItems : 'center',
-    }, 
-    icon : {
-        marginTop : 2,
-        marginLeft : 2,
-    }
 })

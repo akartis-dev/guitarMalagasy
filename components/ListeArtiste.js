@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView, FlatList, ToastAndroid } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, FlatList, ToastAndroid, StatusBar } from 'react-native'
 import HiraArtisteWithImage from './Composition/HiraArtisteWithImage'
 import { queryData, artisteCount } from '../Database/dbQuery'
 import { PulseIndicator } from 'react-native-indicators'
 
 
 //MAMPISEHO IREO ARTISTA REHETRA
+//#2b4a52
 export default class ListeArtiste extends Component {
 
     constructor(props){
@@ -28,8 +29,17 @@ export default class ListeArtiste extends Component {
         })
     }
 
-    componentDidUpdate(){
-        
+    /**
+     * Set du status Bar
+     */
+    componentWillMount(){
+        this._navListener = this.props.navigation.addListener('didFocus', () => {
+            StatusBar.setBackgroundColor("#2b4a52")
+        })
+    }
+
+    componentWillUnmount(){
+        this._navListener.remove()
     }
 
     disableLoading(){

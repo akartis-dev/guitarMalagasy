@@ -88,9 +88,14 @@ export function dbQueryArtisteChant(idArtiste){
 export function dbQueryAllSong(){
     let hiraRehetra = []
     let db = dbConnect().hira
+    let dbArtiste = dbConnect().artiste
 
     for(let p in db){
-        hiraRehetra.push({idHira : db[p].IDhira, titreHira : db[p].titre})
+        hiraRehetra.push({
+            idHira : db[p].IDhira, 
+            titreHira : db[p].titre, 
+            artiste: dbArtiste[db[p].IDartiste - 1]
+        })
     }
     return hiraRehetra.sort((a,b) => a.titreHira.localeCompare(b.titreHira))
 }

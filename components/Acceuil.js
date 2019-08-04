@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, ScrollView, Image, FlatList, Dimensions, Alert } from 'react-native'
+import { StyleSheet, View, ScrollView, FlatList, StatusBar } from 'react-native'
 import AcceuilHiraFarany from './Composition/AcceuilHiraFarany'
 import StyleGlobal from './ReUseComponent/StyleGlobal'
 import { connect } from 'react-redux'
@@ -9,6 +9,16 @@ class Acceuil extends React.Component{
     constructor(props){
         super(props)
     }
+
+    componentDidMount(){
+        this._navListener = this.props.navigation.addListener('didFocus', () => {
+            StatusBar.setBackgroundColor("#5077ad")
+        })
+    }
+
+    componentWillUnmount(){
+        this._navListener.remove()
+    }
     
     render(){
         //console.warn(this.props.lastSong)
@@ -16,6 +26,7 @@ class Acceuil extends React.Component{
                 <ScrollView
                    style = {{backgroundColor : "#e4e8ed"}}
                 >
+                    <StatusBar backgroundColor = "#5077ad" />
                     <View style = {StyleGlobal.containerMargin}>
                         <FlatList 
                             data = {this.props.lastSong}

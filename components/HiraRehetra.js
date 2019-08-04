@@ -1,40 +1,40 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, FlatList, ScrollView,TextInput } from 'react-native'
+import { Text, StyleSheet, View, FlatList, ScrollView,TextInput, StatusBar } from 'react-native'
 import HiraRehetraComponent from './Composition/HiraRehetreComponent'
 import { dbQueryAllSong } from '../Database/dbQuery'
-import { PulseIndicator, SkypeIndicator } from 'react-native-indicators'
+import { PulseIndicator } from 'react-native-indicators'
 import { MaterialHeaderButtons, Item } from '../Navigation/Header'
 
-class HeaderButton extends Component{
-    render(){
-        //console.warn(this.saveStore())
-        return(
-            <MaterialHeaderButtons
-                onOverflowMenuPress={this._onOpenActionSheet}
-            >
-                <Item title="person" iconName="person" onPress={() => alert('person')} />
-                <Item title="edit" show="never" onPress={() => alert('edit')} />
-                <Item title="delete" show="never" onPress={() => alert('delete')} />
-            </MaterialHeaderButtons>
-        )
-    }
+// class HeaderButton extends Component{
+//     render(){
+//         //console.warn(this.saveStore())
+//         return(
+//             <MaterialHeaderButtons
+//                 onOverflowMenuPress={this._onOpenActionSheet}
+//             >
+//                 <Item title="person" iconName="person" onPress={() => alert('person')} />
+//                 <Item title="edit" show="never" onPress={() => alert('edit')} />
+//                 <Item title="delete" show="never" onPress={() => alert('delete')} />
+//             </MaterialHeaderButtons>
+//         )
+//     }
 
-    onOpenActionSheet = ({ hiddenButtons }) => {
-    // Same interface as https://facebook.github.io/react-native/docs/actionsheetios.html
-    let options = hiddenButtons.map(it => it.props.title);
-    let destructiveButtonIndex = 1;
+//     onOpenActionSheet = ({ hiddenButtons }) => {
+//     // Same interface as https://facebook.github.io/react-native/docs/actionsheetios.html
+//     let options = hiddenButtons.map(it => it.props.title);
+//     let destructiveButtonIndex = 1;
 
-    this.props.showActionSheetWithOptions(
-      {
-        options,
-        destructiveButtonIndex,
-      },
-      buttonIndex => {
-        hiddenButtons[buttonIndex].props.onPress();
-      }
-    );
-  };
-}
+//     this.props.showActionSheetWithOptions(
+//       {
+//         options,
+//         destructiveButtonIndex,
+//       },
+//       buttonIndex => {
+//         hiddenButtons[buttonIndex].props.onPress();
+//       }
+//     );
+//   };
+// }
 
 export default class HiraRehetra extends Component {
 
@@ -46,6 +46,22 @@ export default class HiraRehetra extends Component {
         this.data = dbQueryAllSong()
     }
 
+    /**
+     * Set color of statusBar
+     */
+    componentWillMount(){
+        this._navListener = this.props.navigation.addListener('didFocus', () => {
+            StatusBar.setBackgroundColor("#1c1a19")
+        })
+    }
+
+    componentWillUnmount(){
+        this._navListener.remove()
+    }
+
+    /**
+     * Loading vue
+     */
     loadingView(){
         if(this.state.load){
             return(
@@ -90,6 +106,7 @@ export default class HiraRehetra extends Component {
                         renderItem = {({item}) =><HiraRehetraComponent
                             idHira = {item.idHira}
                             titreHira = {item.titreHira}
+                            artiste = {item.artiste}
                             navigation = {this.props.navigation}
                         />}
                     />

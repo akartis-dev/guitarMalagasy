@@ -1,5 +1,5 @@
 import React from 'react'
-import {Image, StyleSheet, Button } from 'react-native'
+import {Image, StyleSheet, StatusBar } from 'react-native'
 import {createStackNavigator, createAppContainer, createMaterialTopTabNavigator } from 'react-navigation'
 import Acceuil from '../components/Acceuil'
 import Favorite from '../components/Favorite'
@@ -226,7 +226,7 @@ const createTabNav = createMaterialTopTabNavigator({
                 style : {
                     backgroundColor : '#514A9D'
                 }, 
-
+                
             }
         }
     },
@@ -283,7 +283,7 @@ const createTabNav = createMaterialTopTabNavigator({
                     borderBottomEndRadius : 4
                 },
                 style : {
-                    backgroundColor : '#362a1a'
+                    backgroundColor : '#3B3735'
                 }, 
             }
         }

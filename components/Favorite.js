@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, ScrollView, FlatList } from 'react-native'
+import { StyleSheet, View, ScrollView, FlatList, StatusBar} from 'react-native'
 import FavorieViewHira from './Composition/FavorieViewHira'
 import StyleGlobal from './ReUseComponent/StyleGlobal'
 import { connect } from 'react-redux'
@@ -9,6 +9,16 @@ class Favorite extends Component {
 
     constructor(props){
         super(props)
+    }
+
+    componentDidMount(){
+        this._navListener = this.props.navigation.addListener('didFocus', () => {
+            StatusBar.setBackgroundColor("#3d377a")
+        })
+    }
+
+    componentWillUnmount(){
+        this._navListener.remove()
     }
 
     render() {
