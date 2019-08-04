@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         borderWidth : 2,
         borderRadius : 3,
         borderColor : 'white',
-        
+        borderBottomColor : '#ebebeb'
     }, 
     icon : {
         position : 'absolute',

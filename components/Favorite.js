@@ -13,7 +13,7 @@ class Favorite extends Component {
 
     render() {
         return (
-                <ScrollView style = {{backgroundColor : '#F5F2F0'}}>
+                <ScrollView style = {{backgroundColor : '#dddce3'}}>
                     <View style = {StyleGlobal.containerMargin}>   
                         <FlatList 
                             data = {this.props.favoriteChant}

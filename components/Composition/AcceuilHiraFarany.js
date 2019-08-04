@@ -28,7 +28,7 @@ class AcceuilHiraFarany extends React.Component{
     render(){
         return(
             <ListStyle onPress = {this.onClick}>
-                <View style = {styles.container}>
+                <View style = {StyleGlobal.textContainer}>
                     <Text style={StyleGlobal.titreHira}>{(this.titreHira)}</Text>
                     <Text style={StyleGlobal.artiste}>{this.props.artiste}</Text>
                 </View>

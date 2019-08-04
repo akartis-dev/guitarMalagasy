@@ -8,6 +8,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 const HEADER_MAX_HEIGHT = Dimensions.get('window').height / 3
 const HEADER_MIN_HEIGHT = 50
 const HEADER_SCROLL = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT
+const WIDTH = Dimensions.get('window').width
 
 class HiraArtista extends Component {
 
@@ -160,7 +161,6 @@ class HiraArtista extends Component {
                 <Animated.View style = {[styles.header , {transform : [{translateY : scrollAnimated}]}]}>
 
                     <Animated.View style = {[styles.bar]}>
-
                         <Animated.Text style = {[styles.artiste, 
                             {transform : [{translateY : textAnimated}, {translateX : centerText}]}, 
                             ]} >
@@ -168,7 +168,6 @@ class HiraArtista extends Component {
                         </Animated.Text>
 
                         <Animated.Text style = {[styles.nbHira, {opacity : opacityTexte}]}>Hira {this.nb}</Animated.Text>
-
                     </Animated.View>
 
                     <Animated.Image 
@@ -227,7 +226,8 @@ const styles = StyleSheet.create({
         fontFamily : "Poppins-SemiBold",
         color : 'black',
         marginLeft : 20,
-        marginTop : HEADER_MAX_HEIGHT / 3
+        marginTop : HEADER_MAX_HEIGHT / 3,
+        width : WIDTH - (WIDTH / 3)
     },
     nbHira : {
         fontSize : 20,

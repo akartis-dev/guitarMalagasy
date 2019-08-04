@@ -180,8 +180,26 @@ const createTabNav = createMaterialTopTabNavigator({
                 return (<Image source= {require('../images/Icon/Acceuil.png')}  style = {styles.image} />)
             }, 
             title : 'FARANY',
-           
-        }
+            tabBarOptions : {
+                showLabel : true,
+                showIcon : false,
+                activeTintColor : 'white',
+                inactiveTintColor : '#D1D1D1', 
+                labelStyle : {
+                    fontFamily : "Poppins-Regular",
+                    fontSize : 17
+                }, 
+                indicatorStyle  : {
+                    backgroundColor : 'white',
+                    height : 2,
+                    borderBottomEndRadius : 4
+                },
+                style : {
+                    backgroundColor : '#6092d6'
+                }, 
+            }
+            
+        },
     },
 
     Favorite : {
@@ -190,7 +208,26 @@ const createTabNav = createMaterialTopTabNavigator({
             tabBarIcon : () => {
                 return (<Image source= {require('../images/Icon/favorite.png')}  style = {styles.image} />)
             }, 
-           title : 'Safidy'
+           title : 'Safidy',
+           tabBarOptions : {
+                showLabel : true,
+                showIcon : false,
+                activeTintColor : 'white',
+                inactiveTintColor : '#D1D1D1', 
+                labelStyle : {
+                    fontFamily : "Poppins-Regular",
+                    fontSize : 17
+                }, 
+                indicatorStyle  : {
+                    backgroundColor : 'white',
+                    height : 2,
+                    borderBottomEndRadius : 4
+                },
+                style : {
+                    backgroundColor : '#514A9D'
+                }, 
+
+            }
         }
     },
 
@@ -201,7 +238,25 @@ const createTabNav = createMaterialTopTabNavigator({
                 return (<Image source= {require('../images/Icon/list.png')}  style = {styles.image} />)
             }, 
            title : 'Artista',
-           
+           tabBarOptions : {
+                showLabel : true,
+                showIcon : false,
+                activeTintColor : 'white',
+                inactiveTintColor : '#D1D1D1', 
+                labelStyle : {
+                    fontFamily : "Poppins-Regular",
+                    fontSize : 17
+                }, 
+                indicatorStyle  : {
+                    backgroundColor : 'white',
+                    height : 2,
+                    borderBottomEndRadius : 4
+                },
+                style : {
+                    backgroundColor : '#3b6069'
+                }, 
+            }
+        
         }
     },
 
@@ -212,21 +267,44 @@ const createTabNav = createMaterialTopTabNavigator({
                 return (<Image source= {require('../images/Icon/ic_search.png')}  style = {styles.image} />)
             }, 
            title : 'Lisitra',
-           
+           tabBarOptions : {
+            
+                showLabel : true,
+                showIcon : false,
+                activeTintColor : 'white',
+                inactiveTintColor : '#D1D1D1', 
+                labelStyle : {
+                    fontFamily : "Poppins-Regular",
+                    fontSize : 17
+                }, 
+                indicatorStyle  : {
+                    backgroundColor : 'white',
+                    height : 2,
+                    borderBottomEndRadius : 4
+                },
+                style : {
+                    backgroundColor : '#362a1a'
+                }, 
+            }
         }
     }
 },
 {
-    tabBarOptions : {
-        showLabel : true,
-        showIcon : false,
-        style : {
-            backgroundColor : '#302C2A'
-        }, 
-        labelStyle : {
-            fontFamily : "Poppins-Regular"
-        }
-    }
+    // tabBarOptions : {
+    //     showLabel : true,
+    //     showIcon : false,
+    //     activeTintColor : 'white',
+    //     inactiveTintColor : '#D1D1D1', 
+    //     labelStyle : {
+    //         fontFamily : "Poppins-Regular",
+    //         fontSize : 17
+    //     }, 
+    //     indicatorStyle  : {
+    //         backgroundColor : 'white',
+    //         height : 2,
+    //         borderBottomEndRadius : 4
+    //     }
+    // }
 }
 )
 
@@ -237,6 +315,5 @@ const styles = StyleSheet.create({
         resizeMode : 'center'
     }
 })
-
 
 export default createAppContainer(createTabNav)

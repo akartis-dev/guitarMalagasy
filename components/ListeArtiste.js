@@ -73,7 +73,6 @@ export default class ListeArtiste extends Component {
                 {this.disableLoading()}
                 { this.loadingView() }
             </View>
-            
         )
     }
 }
@@ -81,7 +80,7 @@ export default class ListeArtiste extends Component {
 const styles = StyleSheet.create({
     container : {
         flex : 1,
-        backgroundColor : '#FAFBFF',
+        backgroundColor : "#f0f4f5",
     },
     loading : {
         position : 'absolute',

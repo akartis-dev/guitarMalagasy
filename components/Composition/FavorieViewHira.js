@@ -29,6 +29,7 @@ export default class FavorieViewHira extends Component {
                     <Text style={StyleGlobal.titreHira}>{this.props.titre}</Text>
                     <Text style={StyleGlobal.artiste}>{this.props.mpihira}</Text>
                 </View>
+                <Image source = {require('../../images/Icon/favoriteBlack.png')} style = {styles.imagesFavorite} />
             </ListStyle>
            
         )
@@ -40,5 +41,14 @@ const styles = StyleSheet.create({
         flex : 1,
         marginLeft : 10,
         marginTop : 2
+    },
+    imagesFavorite : {
+        position : 'absolute',
+        right : 50,
+        top : 15,
+        width : 25,
+        height : 25,
+        resizeMode : 'center',
+        opacity : 0.6
     },
 })

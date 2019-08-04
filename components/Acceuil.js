@@ -14,7 +14,7 @@ class Acceuil extends React.Component{
         //console.warn(this.props.lastSong)
         return (
                 <ScrollView
-                   style = {{backgroundColor : "#F5F2F0"}}
+                   style = {{backgroundColor : "#e4e8ed"}}
                 >
                     <View style = {StyleGlobal.containerMargin}>
                         <FlatList 
