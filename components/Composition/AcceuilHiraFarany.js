@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Image, Text, TouchableOpacity } from 'react-native'
 import ListStyle from '../ReUseComponent/ListStyle'
-
+import StyleGlobal from '../ReUseComponent/StyleGlobal'
 // VUE POUR AFFICHER LES CHANTS RECENTS SUR NOTRE ACCEUIL
 
 class AcceuilHiraFarany extends React.Component{
@@ -29,8 +29,8 @@ class AcceuilHiraFarany extends React.Component{
         return(
             <ListStyle onPress = {this.onClick}>
                 <View style = {styles.container}>
-                    <Text style={styles.titreHira}>{(this.titreHira)}</Text>
-                    <Text style={styles.artiste}>{this.props.artiste}</Text>
+                    <Text style={StyleGlobal.titreHira}>{(this.titreHira)}</Text>
+                    <Text style={StyleGlobal.artiste}>{this.props.artiste}</Text>
                 </View>
             </ListStyle>
         )
@@ -43,18 +43,6 @@ const styles = StyleSheet.create({
         marginLeft : 10,
         marginTop : 2
     },  
-    titreHira : {
-        fontSize : 25,
-        textAlign : 'left',
-        color : '#707070',
-        fontFamily : "Poppins-Regular"
-    },
-    artiste : {
-        fontSize : 15,
-        textAlign : 'left',
-        color : '#D1D1D1',
-        fontFamily : "Poppins-Light"
-    }
 })
 
 export default AcceuilHiraFarany

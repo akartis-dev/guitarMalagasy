@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text, ScrollView, Image, FlatList, Dimensions, Alert } from 'react-native'
 import AcceuilHiraFarany from './Composition/AcceuilHiraFarany'
-import AcceuilHiraNosafidiana from './Composition/AcceuilHiraNosafidiana'
+import StyleGlobal from './ReUseComponent/StyleGlobal'
 import { connect } from 'react-redux'
 
 class Acceuil extends React.Component{
@@ -16,7 +16,7 @@ class Acceuil extends React.Component{
                 <ScrollView
                    style = {{backgroundColor : "#F5F2F0"}}
                 >
-                    <View style = {styles.container}>
+                    <View style = {StyleGlobal.containerMargin}>
                         <FlatList 
                             data = {this.props.lastSong}
                             keyExtractor = {item => item.id.toString()}
@@ -35,16 +35,7 @@ class Acceuil extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    container : {
-        flex : 1,
-        marginLeft : 5,
-        marginRight : 5
-    }, 
-    hiraFarany : {
-        fontSize : 30,
-        fontFamily : 'Poppins-SemiBold',
-        color : '#3F5AA6'
-    },  
+     
 })
 
 const mapStateToProps = (state) => {
