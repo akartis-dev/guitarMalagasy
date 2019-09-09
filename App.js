@@ -5,11 +5,12 @@ import Store from './Store/configureStore'
 import {persistStore} from 'redux-persist'
 import { PersistGate } from 'redux-persist/es/integration/react'
 import { YellowBox } from 'react-native';
+import {Text} from 'react-native'
 
 export default class App extends Component {
   render() {
 
-    YellowBox.ignoreWarnings(['ViewPagerAndroid']);
+    YellowBox.ignoreWarnings(['ViewPagerAndroid', 'Warning: Slider']);
 
     let persistor = persistStore(Store)
     //persistor.purge()

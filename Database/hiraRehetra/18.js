@@ -1,65 +1,81 @@
 export default note = 
 `
-Fampidirana
-F   E E/G# Am
-Dm7 G
+<html>
+<body class="textSize">
+<span class="note">Fampidirana</span><br>
+<span class="note">F   E E/G# Am</span><br>
+<span class="note">Dm7 G</span><br>
 
-Tonony 1
-   C            G/B      Am  G
-Ianao 'lay tsy manan-tsahala
-F         Em7    Dm7     G
-'lay nisafidy hizara ny diako
-   C       G/B      Am  G
-Ianao ihany no mahalala
-F       Em7      Dm7     G
+<p>
+<span class="tonony">Tonony 1</span><br>
+<span class="note">C            G/B      Am  G</span><br>
+Ianao 'lay tsy manan-tsahala<br>
+<span class="note">F         Em7    Dm7     G</span><br>
+'lay nisafidy hizara ny diako<br>
+<span class="note">C       G/B      Am  G</span><br>
+Ianao ihany no mahalala<br>
+<span class="note">F       Em7      Dm7     G</span><br>
 'Reo ahiahy sy 'reo faniriako
+</p>
 
-     Fiverenana
-        F        E   E/G#    Am
-     Ianao teo anilako   hatrany
-        Dm7      G       E/G#   Am
-     Nizara ny tsiky, namafa tomany
-        F        E     E/G#  Am
-     Ianao nampijoro, nampitraka
-        Dm7         Dm7     G        G
-     Nanampy ahy hibaby ny mafy tsy zaka
+<p class="refrain">
+<span class="tonony">Fiverenana</span><br>
+<span class="note">F        E   E/G#    Am</span><br>
+Ianao teo anilako   hatrany<br>
+<span class="note">Dm7      G       E/G#   Am</span><br>
+Nizara ny tsiky, namafa tomany<br>
+<span class="note">F        E     E/G#  Am</span><br>
+Ianao nampijoro, nampitraka<br>
+<span class="note">Dm7         Dm7     G        G</span><br>
+Nanampy ahy hibaby ny mafy tsy zaka
+</p>
 
-Solo (2x)
-C Am 
-Am-G-Am F 
-G
-     Fiverenana
-        F        E   E/G#    Am
-     Ianao teo anilako   hatrany
-        Dm7        G       E/G#   Am
-     Nizara ireo tsiky, namafa tomany
-        F        E     E/G#  Am
-     Ianao nampijoro, nampitraka
-        Dm7         Dm7     G        G
-     Nanampy ahy hibaby ny mafy tsy zaka
+<span class="note">Solo (2x)</span><br>
+<span class="note">C Am </span><br>
+<span class="note">Am-G-Am F </span><br>
+<span class="note">G</span>
 
-Tonony 2
-   C            G/B      Am  G
-Ianao 'lay tsy manan-tsahala
-F         Em7    Dm7      G
-'lay nisafidy hizara ny hoaviko
-   C           G/B      Am  G
-Ianao no hany tokiko malala
-F            Em7  Dm7     G
+<p class="refrain">
+<span class="tonony">Fiverenana</span><br>
+   <span class="note">F        E   E/G#    Am</span><br>
+Ianao teo anilako   hatrany<br>
+   <span class="note">Dm7        G       E/G#   Am</span><br>
+Nizara ireo tsiky, namafa tomany<br>
+   <span class="note">F        E     E/G#  Am</span><br>
+Ianao nampijoro, nampitraka<br>
+   <span class="note">Dm7         Dm7     G        G</span><br>
+Nanampy ahy hibaby ny mafy tsy zaka
+</p>
+
+<p>
+<span class="tonony">Tonony 2</span><br>
+   <span class="note">C            G/B      Am  G</span><br>
+Ianao 'lay tsy manan-tsahala<br>
+<span class="note">F         Em7    Dm7      G</span><br>
+'lay nisafidy hizara ny hoaviko<br>
+   <span class="note">C           G/B      Am  G</span><br>
+Ianao no hany tokiko malala<br>
+<span class="note">F            Em7  Dm7     G</span><br>
 'Lay mandra-maty hany hotiaviko
+</p>
 
-     Fiverenana
-        F        E     E/G#  Am
-     Ianao teo anilako_eo   foana
-          Dm7    G          E/G#       Am
-     Tsy fanontaniana, tsy nisy hoe nahoana
-        F           E     E/G# Am
-     Ianao tsy mba be fisehosehoana
-         Dm7     Dm7              G    
-     'Nefa tratr’antso rehefa_antsoina
+<p class="refrain">
+<span class="tonony">Fiverenana</span><br>
+   <span class="note">F        E     E/G#  Am</span><br>
+Ianao teo anilako_eo   foana<br>
+   <span class="note">Dm7    G          E/G#       Am</span><br>
+Tsy fanontaniana, tsy nisy hoe nahoana<br>
+   <span class="note">F           E     E/G# Am</span><br>
+Ianao tsy mba be fisehosehoana<br>
+   <span class="note">Dm7     Dm7              G    </span><br>
+'Nefa tratr’antso rehefa_antsoina
+</p>
 
-Solo 
-C Am 
-Am-G-Am F
-G  C...
+<span class="tonony">Solo </span><br>
+<span class="note">C Am </span><br>
+<span class="note">Am-G-Am F</span><br>
+<span class="note">G  C...</span>
+
+</body>
+</html>
 `

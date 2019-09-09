@@ -1,106 +1,123 @@
 export default note = 
 `
-D A Bm G
-D A G
+<html>
+<body class="textSize">
+<span class="note refrain">D A Bm G</span> <br>
+<span class="note refrain">D A G</span> <br>
 
-D        A
- Lasa ianao 
-Bm      G         D
- Tsy niherika intsony 
-         A
-Nandray lamba 
-Bm     G           D
- Tapa-kevitra fa hiainga
-       A
-Any angamba 
-Bm      G         D
- Mahafinaritra kokoa 
-     A
-Sahinao 
-Bm     G           D A      
- No nidila_ny lalako__ 
+<p>
+<span class="note">D        A</span><br>
+Lasa ianao <br>
+<span class="note">Bm      G         D</span><br>
+Tsy niherika intsony <br>
+<span class="note">A</span><br>
+Nandray lamba <br>
+<span class="note">Bm     G           D</span><br>
+Tapa-kevitra fa hiainga<br>
+<span class="note">A</span><br>
+Any angamba <br>
+<span class="note">Bm      G         D</span><br>
+Mahafinaritra kokoa <br>
+<span class="note">A</span><br>
+Sahinao <br>
+<span class="note">Bm     G           D A      </span><br>
+No nidila_ny lalako__ <br>
+</p>
 
-D       A
- Nefa izaho 
-Bm     G           D
- Tsapako fa mbola tia 
-       A       
-Mararirary 
-Bm          G        D
- Ny tenako nanimbinana 
-        A
-Tsy nampoiziko 
-Bm      G         D
- Ianao hahavita izany 
-      A
-Tampoka
-Bm     G              D  A
- Tampoka tsy mahalehila___hy 
+<p>
+<span class="note">D       A</span><br>
+Nefa izaho <br>
+<span class="note">Bm     G           D</span><br>
+Tsapako fa mbola tia <br>
+<span class="note">A       </span><br>
+Mararirary <br>
+<span class="note">Bm          G        D</span><br>
+Ny tenako nanimbinana <br>
+<span class="note">A</span><br>
+Tsy nampoiziko <br>
+<span class="note">Bm      G         D</span><br>
+Ianao hahavita izany <br>
+<span class="note">A</span><br>
+Tampoka<br>
+<span class="note">Bm     G              D  A</span><br>
+Tampoka tsy mahalehila___hy <br>
+</p>
 
-Bm G' (2x)
+<span class="note refrain">Bm G' (2x)</span><br>
 
-          D                       A
-      Fony isika vao nifankalala 
-                              Bm
-     Ohatra ny tsy ho faty ny aina 
-       G         D
-     Tsy nifankafohy
+<p>
+<span class="note">D                       A</span><br>
+Fony isika vao nifankalala <br>
+                    <span class="note">Bm</span><br>
+Ohatra ny tsy ho faty ny aina <br>
+<span class="note">G         D</span><br>
+Tsy nifankafohy<br>
+<br>
+<span class="note">A-Bm                          A               </span><br>
+nifampitaritarika, nifanadala<br>
+          <span class="note">G5 F#5 A5, G5 B5 A5</span><br>
+Aoka fotsiny hoa<br>   
+</p>
 
-     A-Bm                          A               
-         nifampitaritarika, nifanadala
-                    G5 F#5 A5, G5 B5 A5
-     Aoka fotsiny hoa   
 
+<p>
+<span class="note">D      A</span><br>
+Naleonao<br>
+<span class="note">Bm        G         D</span><br>
+Hamonon-tena teo izaho <br>
+<span class="note">A</span><br>
+Valio fa <br>
+<span class="note">Bm             G                   D</span><br>
+Haniry tsy mihaina raha tsy eo ianao <br>
+<span class="note">A   </span><br>
+Ho kaloiko <br>
+<span class="note">Bm           G         D</span><br>
+Fa ny amintsika ho doria <br>
+<span class="note">A</span><br>
+Sanatria <br>
+<span class="note">Bm         G           D A</span><br>
+Ny hivadika dia sanatri__a<br> 
+</p>
 
-D      A
- Naleonao
-Bm        G         D
- Hamonon-tena teo izaho 
-       A
-Valio fa 
-Bm             G                   D
- Haniry tsy mihaina raha tsy eo ianao 
-      A   
-Ho kaloiko 
-Bm           G         D
- Fa ny amintsika ho doria 
-      A
-Sanatria 
-Bm         G           D A
- Ny hivadika dia sanatri__a 
+<p>
+<span class="note">D            A</span> <br>
+Ny tsara angamba <br>
+<span class="note">Bm         G         D</span> <br>
+Hijanona ho mpinamana  <br>
+<span class="note">A</span> <br>
+Fitiavana  <br>
+<span class="note">Bm     G            D</span> <br>
+Mampikiky mampitomany  <br>
+<span class="note">A</span> <br>
+Mankalao  <br>
+<span class="note">Bm     G        D</span> <br>
+Nefa tolo-Janahary  <br>
+<span class="note">A</span> <br>
+Ekeko  <br>
+<span class="note">Bm       G          D A</span> <br>
+Raisiko am-pitiavana <br>
+</p>
 
-D            A
- Ny tsara angamba
-Bm         G         D
- Hijanona ho mpinamana 
-        A
-Fitiavana 
-Bm     G            D
- Mampikiky mampitomany 
-      A
-Mankalao 
-Bm     G        D
- Nefa tolo-Janahary 
-    A
-Ekeko 
-Bm       G          D A
- Raisiko am-pitiavana
+<span class="note refrain">Bm G'</span>
 
-Bm G'
+<p>
+<span class="note">D                       A  </span><br>
+Fony isika vao nifankalala  <br>
+                    <span class="note">Bm  </span><br>
+Ohatra ny tsy ho faty ny aina  <br>
+<span class="note">G          D  </span><br>
+Tsy nifankafohy  <br>
+<span class="note">A-Bm                          A  </span><br>
+nifampitaritarika, nifanadala  <br>
+               <span class="note">G5   F#5  A5, G5 B5 A5  </span><br>
+Aoka fotsiny fa mankarary fo<br>
+<span class="note">G5   F#5  A5 G5 B5 A5</span><br>
+Mankarary fo (2x)<br>
+          <span class="note">G5 F#5 D</span><br>
+Mankarary fo (2X)<br>
+</p>
 
-     D                       A  
-      Fony isika vao nifankalala  
-                              Bm  
-     Ohatra ny tsy ho faty ny aina  
-       G          D  
-     Tsy nifankafohy  
-     A-Bm                          A  
-         nifampitaritarika, nifanadala  
-                      G5   F#5  A5, G5 B5 A5  
-     Aoka fotsiny fa mankarary fo
-      G5   F#5  A5 G5 B5 A5
-     Mankarary fo (2x)
-                G5 F#5 D
-     Mankarary fo (2X)
+</body>
+</html>
 
 `

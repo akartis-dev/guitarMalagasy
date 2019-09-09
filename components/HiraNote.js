@@ -1,19 +1,11 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, TouchableOpacity, Slider } from 'react-native'
 import {dbQueryArtisteSong} from '../Database/dbQueryArtisteSong'
-import { MaterialHeaderButtons, Item } from '../Navigation/Header'
 import { connect } from 'react-redux'
-import Store from '../Store/configureStore'
 import { queryChantDetailWithId } from '../Database/dbQuery'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import HTML from 'react-native-render-html';
-
-/**
- * Object globale contenant les details du chansons a ajouter ou a supprimer de notre redux
- * Pour etre acceder sur notre Test
- */
-let HiraId = {} 
-let SharedDataClass = {}
+import { interpolate } from './function/fontSize'
 
 /**
  * Rendu normal de notre application
@@ -28,7 +20,9 @@ class HiraNote extends Component {
         super(props)
         this.idHira = this.props.navigation.state.params.idHira
         this.detail = this.loadChantDetail()
-        
+        this.state = {
+            defaultFont : 20,
+        }
     }
 
     componentDidMount(){
@@ -88,20 +82,8 @@ class HiraNote extends Component {
 
     /**
      * Methode rendu
-     *   <Text style = {[styles.note, {fontSize : this.props.fontSize}]}> {dbQueryArtisteSong(this.idHira).default}</Text>
-     * renderers = {
-                        {
-                            //utilisation du custom font pour modifier le contenu general de notre html
-                            t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
-                                style = {{ fontSize : 15, color : '#DAA452'}}>
-                                {children}
-                            </Text>,
-                        }
-                        }
-
      */
     render() {
-        
         return (
             <View style = {styles.container}>
                 <View style = {styles.headBar}>
@@ -115,6 +97,18 @@ class HiraNote extends Component {
                             <MaterialIcons name = 'keyboard-arrow-left' size = {45} color = "black" />
                         </TouchableOpacity>
                 </View>
+                <Slider
+                    style={{height: 20, borderRadius : 10}}
+                    minimumValue={-5}
+                    maximumValue={5}
+                    minimumTrackTintColor="#DAA452"
+                    maximumTrackTintColor="#000000"
+                    thumbTintColor = '#DAA452'
+                    step = {1}
+                    onValueChange = {(defaultFont) => {
+                        console.warn(defaultFont)
+                    }}
+                />
                 <ScrollView 
                 	style = {styles.noteContainer}
                     showsVerticalScrollIndicator = {false}
@@ -125,13 +119,18 @@ class HiraNote extends Component {
                         {
                             //utilisation du custom font pour modifier le contenu general de notre html
                             t : (htmlAttribs, children, convertedCSSStyles, passProps) => <Text 
-                                style = {{ fontSize : 17}}>
+                               >
                                {children}
                             </Text>,
                         }
                         }
                         baseFontStyle = {{fontFamily : 'Poppins-Light' }}
-                        classesStyles = { {note : { color : '#DAA452'}} }
+                        classesStyles = { {note : { color : '#DAA452', fontFamily : "Poppins-Regular"}, 
+                        textSize : {fontSize : interpolate(this.state.defaultFont)}, 
+                        refrain : {borderLeftWidth: 2, borderColor : '#D1D1D1', paddingLeft : 8, marginLeft:10},
+                        tonony : {fontFamily : "Poppins-Regular", color : 'black'},
+                        
+                         }}
                         html = {dbQueryArtisteSong(this.idHira).default} 
                     />
                 </ScrollView>
@@ -140,6 +139,9 @@ class HiraNote extends Component {
     }
 }
 
+/**
+ * Connexion sur le redux
+ */
 const mapStateToProps = (state) => {
     return {
         favoriteChant : state.favoriteReducer.favoriteChant,

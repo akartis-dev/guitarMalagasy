@@ -79,6 +79,7 @@ class HiraArtista extends Component {
         )
     }
 
+
     /**
      * RENDER
      */
@@ -152,8 +153,8 @@ class HiraArtista extends Component {
         return (
             <View style = {styles.container}>
 
-                <Animated.ScrollView onScroll = {Animated.event( [{nativeEvent : {contentOffset : {y : this.state.scrollY }}}], 
-                     {useNativeDriver: true})}    
+                <Animated.ScrollView onScroll = {this.nb >= 11 ? Animated.event( [{nativeEvent : {contentOffset : {y : this.state.scrollY }}}], 
+                     {useNativeDriver: true}) : 0}    
                 >
                     {this._listData()}
                 </Animated.ScrollView>

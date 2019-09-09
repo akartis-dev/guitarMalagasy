@@ -100,6 +100,7 @@
 		C214F2FD6E6E436A865EEB35 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5398EDABF3F84F96BFD64BF9 /* Poppins-Thin.ttf */; };
 		4B73F56C62484ACBA482CB2C /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C50964E0CDEC484483676D63 /* Poppins-ThinItalic.ttf */; };
 		538AEE4777434548A247456C /* libRNCViewpager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838AEC64D70C4701A743B13C /* libRNCViewpager.a */; };
+		8D90E89B287245EBB4BDEA8F /* libRNCSlider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58B0E4873E54F7C81BCF576 /* libRNCSlider.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,6 +474,8 @@
 		C50964E0CDEC484483676D63 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../asset/font/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		20AE76C587DC4C9497DD10E9 /* RNCViewpager.xcodeproj */ = {isa = PBXFileReference; name = "RNCViewpager.xcodeproj"; path = "../node_modules/@react-native-community/viewpager/ios/RNCViewpager.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		838AEC64D70C4701A743B13C /* libRNCViewpager.a */ = {isa = PBXFileReference; name = "libRNCViewpager.a"; path = "libRNCViewpager.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FB2A341D70FE49019B614366 /* RNCSlider.xcodeproj */ = {isa = PBXFileReference; name = "RNCSlider.xcodeproj"; path = "../node_modules/@react-native-community/slider/ios/RNCSlider.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A58B0E4873E54F7C81BCF576 /* libRNCSlider.a */ = {isa = PBXFileReference; name = "libRNCSlider.a"; path = "libRNCSlider.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,6 +511,7 @@
 				67C2765CACFE46FC912463C7 /* libz.tbd in Frameworks */,
 				83ED869FFEFA4AE59F0070B4 /* libRNVectorIcons.a in Frameworks */,
 				538AEE4777434548A247456C /* libRNCViewpager.a in Frameworks */,
+				8D90E89B287245EBB4BDEA8F /* libRNCSlider.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +710,7 @@
 				11AE9E8DEC0748B18F36D7EE /* RealmReact.xcodeproj */,
 				81D846FEBC5A487B9D3A7335 /* RNVectorIcons.xcodeproj */,
 				20AE76C587DC4C9497DD10E9 /* RNCViewpager.xcodeproj */,
+				FB2A341D70FE49019B614366 /* RNCSlider.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1453,6 +1458,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1461,6 +1467,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Debug;
@@ -1489,6 +1496,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1497,6 +1505,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Release;
@@ -1524,6 +1533,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Debug;
@@ -1550,6 +1560,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Release;
@@ -1586,6 +1597,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1594,6 +1606,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Debug;
@@ -1630,6 +1643,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1638,6 +1652,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Release;
@@ -1673,6 +1688,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1681,6 +1697,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Debug;
@@ -1716,6 +1733,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1724,6 +1742,7 @@
 					"$(SRCROOT)\..\node_modules\realm\src/**",
 					"$(SRCROOT)\..\node_modules\react-native-vector-icons\RNVectorIconsManager",
 					"$(SRCROOT)\..\node_modules\@react-native-community\viewpager\ios",
+					"$(SRCROOT)\..\node_modules\@react-native-community\slider\ios",
 				);
 			};
 			name = Release;

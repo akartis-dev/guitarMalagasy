@@ -1,103 +1,108 @@
 export default note = 
 `
-<t>
-TONONY 1<br>
-<font class="note">G              D/F#</font><br>
-..Fitia tsy vorindra <br>
-<font class="note">Em             Bm</font><br>
-Tsy nety hafana ny fo <br>
-<font class="note">C                A</font><br>
-Nikasa hifindra, hanova famindra <br>
-<font class="note">G'              Em'</font><br>
-..Fa mba te ho soa <br>
-<font class="note">Am</font><br>
-Efa leo ny mihafy <br>
-<font class="note">D               C      G</font><br>
-..Fa tratry ny herika mafy <br>
-<br>
+<html>
+<body class="textSize">
 
-TONONY 2<br>
-<font class="note">G              D/F#</font><br>
-..Ka mila hazavana <br>
-<font class="note">Em             Bm</font><br>
-Mitady ny mety kokoa <br>
-<font class="note">C                A</font><br>
-Lasa tsy tana, hanavao filalao<br>
-<font class="note">G'              Em'</font><br>
-..Fa mba te ho soa <br>
-<font class="note">Am</font><br>
-Handositra ditra <br>
-<font class="note">D           C         G</font><br>
-..Fa be ny ratra sy tritra <br>
-<br>
+<p>
+<span class="tonony">Tonony 1</span> <br />
+<span class="note">G              D/F#</span> <br />
+..Fitia tsy vorindra  <br />
+<span class="note">Em             Bm</span> <br />
+Tsy nety hafana ny fo  <br />
+<span class="note">C                A</span> <br />
+Nikasa hifindra, hanova famindra  <br />
+<span class="note">G'              Em'</span> <br />
+..Fa mba te ho soa  <br />
+<span class="note">Am</span> <br />
+Efa leo ny mihafy  <br />
+<span class="note">D               C      G</span> <br />
+..Fa tratry ny herika mafy
+</p>
 
-     <pre>  
-     FIVERENANA
-     <font class="note">C</font>
-     Ka indro ny tanako 
-     <font class="note">D/F#           C           </font>
-     ..Hanome ny anjarako 
-     <font class="note">B              Em</font>
-     ..Hanoro, ankahery 
-     <font class="note">G                   C</font>
-     ..Ny havia sy ny havanako 
-     <font class="note">D/F#           C </font>
-     ..Hamihina ny havako 
-     <font class="note">B                 Em  Dm</font>
-     ..Raha sendra ka very 
-     </pre>
+<p>
+<span class="tonony">Tonony 2</span> <br />
+<span class="note">G              D/F#</span> <br />
+..Ka mila hazavana  <br />
+<span class="note">Em             Bm</span> <br />
+Mitady ny mety kokoa  <br />
+<span class="note">C                A</span> <br />
+Lasa tsy tana, hanavao filalao <br />
+<span class="note">G'              Em'</span> <br />
+..Fa mba te ho soa  <br />
+     <span class="note">Am</span> <br />
+Handositra ditra  <br />
+<span class="note">D           C         G</span> <br />
+..Fa be ny ratra sy tritra
+</p>
 
-<br>
-TETEZANA<br>
-<font class="note">C..D/F#..,C..B..</font><br>
-<font class="note">Em.. G-D-C</font><br>
-<br>
+<p class="refrain">
+<span class="tonony">Fiverenana</span> <br />
+<span class="note">C</span> <br />
+Ka indro ny tanako  <br />
+<span class="note">D/F#           C           </span> <br />
+..Hanome ny anjarako  <br />
+<span class="note">B              Em</span> <br />
+..Hanoro, ankahery  <br />
+<span class="note">G                   C</span> <br />
+..Ny havia sy ny havanako  <br />
+<span class="note">D/F#           C </span> <br />
+..Hamihina ny havako  <br />
+<span class="note">B                 Em  Dm</span> <br />
+..Raha sendra ka very
+</p>
 
-TONONY 3<br>
-<font class="note">G              D/F#</font><br>
-..Koa aza sondrina <br>
-<font class="note">Em          Bm</font><br>
-Ho lavitra ny aleha <br>
-<font class="note">C                 A</font><br>
-Ahazo ny irina, ho sendra ny tiana <br>
-<font class="note">G'                 Em'</font><br>
-..Fa ny tsiny efa be <br>
-<font class="note">Am</font><br>
-Mahitsia ,mahereza <br>
-<font class="note">D         C        G</font><br>
-..Enga anie mba hateza<br>
-<br>
+<span class="tonony">Tetezana</span>  <br />
+<span class="note">C..D/F#..,C..B..</span><br />
+<span class="note">Em.. G-D-C</span>
 
-TETEZANA<br>
-<font class="note">C</font><br>
-Izaho tsy havanana <br>
-<font class="note">D/F#           C </font><br>
-..Raha toa ka resaka <br>
-<font class="note">B            Em</font><br>
-..Ahasahirankirana <br>
-<font class="note">G                  C</font><br>
-..Raha kosa ka fitiavana <br>
-<font class="note">D/F#           C </font><br>
-..Dia ananako betsaka <br>
-<font class="note">B             Em</font><br>
-..Azo hivalamparana <br>
-<br>
+<p>
+<span class="tonony">Tonony 3</span> <br />
+<span class="note">G              D/F#</span> <br />
+..Koa aza sondrina  <br />
+<span class="note">Em          Bm</span> <br />
+Ho lavitra ny aleha  <br />
+<span class="note">C                 A</span> <br />
+Ahazo ny irina, ho sendra ny tiana  <br />
+<span class="note">G'                 Em'</span> <br />
+..Fa ny tsiny efa be  <br />
+<span class="note">Am</span> <br />
+Mahitsia ,mahereza  <br />
+<span class="note">D         C        G</span> <br />
+..Enga anie mba hateza
+</p>
 
-<pre>
-     FIVERENANA (2x)
-     <font class="note">G              C</font>
-     ..Ka indro ny tanako 
-     <font class="note">D/F#           C </font>
-     ..Hanome ny anjarako 
-     <font class="note">B              Em</font>
-     ..Hanoro, ankahery 
-     <font class="note">G                   C</font>
-     ..Ny havia sy ny havanako 
-     <font class="note">D/F#           C </font>
-     ..Hamihina ny havako 
-     <font class="note">B                 Em </font>
-     ..Raha sendra ka very
-</pre>
+<p>
+<span class="tonony">Tetezana</span>
+<span class="note">C</span> <br />
+Izaho tsy havanana  <br />
+<span class="note">D/F#           C </span> <br />
+..Raha toa ka resaka  <br />
+<span class="note">B            Em</span> <br />
+..Ahasahirankirana  <br />
+<span class="note">G                  C</span> <br />
+..Raha kosa ka fitiavana  <br />
+<span class="note">D/F#           C </span> <br />
+..Dia ananako betsaka  <br />
+<span class="note">B             Em</span> <br />
+..Azo hivalamparana
+</p>
 
-</t>
+<p class = "refrain">
+<span class="tonony">Fiverenana (2x)</span> <br />
+<span class="note">G              C</span> <br />
+..Ka indro ny tanako  <br />
+<span class="note">D/F#           C </span> <br />
+..Hanome ny anjarako  <br />
+<span class="note">B              Em</span> <br />
+..Hanoro, ankahery  <br />
+<span class="note">G                   C</span> <br />
+..Ny havia sy ny havanako  <br />
+<span class="note">D/F#           C </span> <br />
+..Hamihina ny havako  <br />
+<span class="note">B                 Em </span> <br />
+..Raha sendra ka very
+</p>
+
+</body>
+</html>
 `

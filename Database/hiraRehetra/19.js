@@ -1,82 +1,99 @@
 export default note = 
 `
-Fampidirana
+<html>
+<body class="textSize">
+<span class="tonony">Fampidirana</span>
 G-G'  C/G (x2)
 
-Tonony 1
-G      Am         Em  G
- Tonga aho dia nanoroka
-C    D     G
- Ny takolakao
-C         Bm          Am          C
- Nefa ianao toa tsy mba nangoraka ahy
-Em        D7       G  Tab 1
- Angamba kosa efa lao
+<p>
+<span class="tonony">Tonony 1</span><br>
+<span class="note">G      Am         Em  G</span><br>
+Tonga aho dia nanoroka<br>
+<span class="note">C    D     G</span><br>
+Ny takolakao<br>
+<span class="note">C         Bm          Am          C</span><br>
+Nefa ianao toa tsy mba nangoraka ahy<br>
+<span class="note">Em        D7       G  Tab 1</span><br>
+Angamba kosa efa lao<br>
+<br>
+<span class="tonony">Tonony 2</span><br>
+<span class="note">G         Am       Em    G</span><br>
+Mba hitanao tokoa   va re<br>
+<span class="note">C       D          G   G' G6 G</span><br>
+Ireto masoko mitoloko o  o  o <br>
+<span class="note">C       Bm       Am        C</span><br>
+Mitady  fitiavana be dia be <br>
+<span class="note">Em         D7      G   Tab 1</span><br>
+Mba hampitony ny foko
+</p>
 
-Tonony 2
-G         Am       Em    G
- Mba hitanao tokoa   va re
-C       D          G   G' G6 G
- Ireto masoko mitoloko o  o  o 
-C       Bm       Am        C
- Mitady  fitiavana be dia be 
-Em         D7      G   Tab 1
- Mba hampitony ny foko
+<p class="refrain">
+<span class="tonony">Fiverenana #1</span><br>
+<span class="note">Am             Bm  C   G</span><br>
+Nangarika fotsiny  ianao<br>
+<span class="note">Am     Bm       D</span><br>
+Ka nanao jado-tongotra<br>
+<span class="note">Am'        C          G         Em</span><br>
+Malama anie ny lalana ho diavinao<br>
+<span class="note">Am         D7          G G' G6 G</span><br>
+Ka sao ianao ho potraka o! o! o!<br>
+<span class="note">Am'       C           G         Em</span><br>
+Malama anie ny lalana ho diavinao<br>
+<span class="note">Am         D7          G Tab 1</span><br>
+Ka sao ianao ho potraka
+</p>
 
-     Fiverenana #1
-     Am             Bm  C   G
-      Nangarika fotsiny  ianao
-     Am     Bm       D
-      Ka nanao jado-tongotra
-     Am'        C          G         Em
-      Malama anie ny lalana ho diavinao
-     Am         D7          G G' G6 G
-      Ka sao ianao ho potraka o! o! o!
-     Am'       C           G         Em
-      Malama anie ny lalana ho diavinao
-     Am         D7          G Tab 1
-      Ka sao ianao ho potraka 
-Tonony 3
-G           Am         Em   G
- Dia handao ahy tokoa va ianao
-C    D       G
- Ry Farakely o 
-G'  G6 G
-o  o   o 
-C      Bm            Am          C
- Fo maratra anie no sisa  navelanao
-Em         D7    G Tab 1
-  o o o    o  o  o 
+<p>
+<span class="tonony">Tonony 3</span><br>
+<span class="note">G           Am         Em   G</span><br>
+Dia handao ahy tokoa va ianao<br>
+<span class="note">C    D       G</span><br>
+Ry Farakely o <br>
+<span class="note">G'  G6 G</span><br>
+o  o   o <br>
+<span class="note">C      Bm            Am          C</span><br>
+Fo maratra anie no sisa  navelanao<br>
+<span class="note">Em         D7    G Tab 1</span><br>
+o o o    o  o  o
+</p>
 
-     Fiverenana #2
-     Am       Bm        C    G
-      Nefa ianao sao mihevitra
-     Am    Bm       D
-      Fa izaho hanaraka anao
-     Am'      C                 G    Em
-      Ry Farakely mahalasa eritreritra
-     Am     D7      G G'  G6 G
-      Zory ny lalanao o ! o! o! 
-     Am'      C                 G    Em
-      Ry Farakely mahalasa eritreritra
-     Am     D7     G
-      Zory ny lalanao
+      <p class="refrain">
+<span class="tonony">Fiverenana #2</span><br>
+<span class="note">Am       Bm        C    G</span><br>
+Nefa ianao sao mihevitra<br>
+<span class="note">Am    Bm       D</span><br>
+Fa izaho hanaraka anao<br>
+<span class="note">Am'      C                 G    Em</span><br>
+Ry Farakely mahalasa eritreritra<br>
+<span class="note">Am     D7      G G'  G6 G</span><br>
+Zory ny lalanao o ! o! o! <br>
+<span class="note">Am'      C                 G    Em</span><br>
+Ry Farakely mahalasa eritreritra<br>
+<span class="note">Am     D7     G</span><br>
+Zory ny lalanao
+      </p>
 
-Solo
-G Am Em G
-C' D  G G'-G6-G
-C Bm Am C'
-Em D7 G
-     Fiverenana #2
+<p>
+<span class="tonony">Solo</span><br>
+<span class="note">G Am Em G</span><br>
+<span class="note">C' D  G G'-G6-G</span><br>
+<span class="note">C Bm Am C'</span><br>
+<span class="note">Em D7 G</span><br>
+<br>
+<span class="refrain">Fiverenana #2</span><br>
+<br>
+<span class="tonony">Famaranana</span><br>
+<span class="note">G-G', C/G (2x)</span><br>
+<span class="note">Tab 1</span><br>
+<br>
+<span class="note">e|---------------</span><br>
+<span class="note">b|---------------</span><br>
+<span class="note">g|---------------</span><br>
+<span class="note">D|--0-2-0</span><br>
+<span class="note">A|--------0-2-0--</span><br>
+<span class="note">E|---------------</span><br>
+</p>
 
-Famaranana
-G-G', C/G (2x)
-Tab 1
-
-e|---------------
-b|---------------
-g|---------------
-D|--0-2-0
-A|--------0-2-0--
-E|---------------
+</body>
+</html>
 `

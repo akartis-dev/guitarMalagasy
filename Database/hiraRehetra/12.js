@@ -1,41 +1,46 @@
 export default note = 
 `
-<t>
-     <pre>
-Fampidirana
-<font class="note">G  D/F# A</font></br>
-<font class="note">D  A'   G</font></br>
-<font class="note">Em A    D</font></br>
-Tonony
-<font class="note">G                  A</font>
-Ny fitiavantsika roa
-<font class="note">D</font>
-Kanto tokoa
-<font class="note">G               A</font>
-Nofinofy mamy soa
-<font class="note">D</font>
-Tsy mba ho lo
-<font class="note">G               A</font>
-Embona mameno fo
-<font class="note">D                A</font>
-Tsisy ahiahy, mety hampanahy
-<font class="note">Bm          A         G</font>
-Ny androntsika hatramin’izao
-<font class="note">A                 D</font>
+<html>
+<body class = "textSize">
+<span class="tonony">Fampidirana</span><br>
+<span class="note">G  D/F# A</span></br>
+<span class="note">D  A'   G</span></br>
+<span class="note">Em A    D</span></br>
+
+<p>
+<span class="tonony">Tonony</span><br>
+<span class="note">G                  A</span><br>
+Ny fitiavantsika roa<br>
+<span class="note">D</span><br>
+Kanto tokoa<br>
+<span class="note">G               A</span><br>
+Nofinofy mamy soa<br>
+<span class="note">D</span><br>
+Tsy mba ho lo<br>
+<span class="note">G               A</span><br>
+Embona mameno fo<br>
+<span class="note">D                A</span><br>
+Tsisy ahiahy, mety hampanahy<br>
+<span class="note">Bm          A         G</span><br>
+Ny androntsika hatramin’izao<br>
+<span class="note">A                 D</span><br>
 Tanana tsy mifandao
+</p>
 
-     Fiverenana
-     <font class="note">Em             A</font>
-     Aina miray, tsy vaky ilay
-     <font class="note">D            </font>
-     Toa ‘ty sy ‘nday
-     <font class="note">Em           A</font>
-     Lakam-pitia, fo mifangia
-     <font class="note">D</font>
-     Miara-dia
+<p class="refrain">
+<span class="tonony">Fiverenana</span><br>
+<span class="note">Em             A</span><br>
+Aina miray, tsy vaky ilay<br>
+<span class="note">D            </span><br>
+Toa ‘ty sy ‘nday<br>
+<span class="note">Em           A</span><br>
+Lakam-pitia, fo mifangia<br>
+<span class="note">D</span><br>
+Miara-dia
+</p>
 
-Fampidirana/Tonony
-Fiverenana (2x)
-     </pre>
-</t>
+<span class="tonony">Fampidirana/Tonony</span></span><br>
+<span class="tonony">Fiverenana (2x)</span><br>
+</body>
+</html>
 `

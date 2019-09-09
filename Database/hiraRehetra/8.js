@@ -1,115 +1,135 @@
 export default note = 
 `
-Fampidirana
-C#m B  A
-             E
-D|-----2----
-A|-2-4---4-2
-             A'
-e|-2s4-4-4
-b|-3s4-5-5
-g|-2s4-5-5
+<html>
+<body class="textSize">
 
-Tonony 1
-E                  B
- Tsy hambaranao marary mare zaho 
-F#m        A          
- Anao navy, anao namangy 
-E            B        
- Ndreky tsy navozoanao vava 
-F#m  A               E             
-   Isaorako anao magnangy 
+<p>
+<span class="tonony">Fampidirana</span><br>
+<span class="note">C#m B  A</span><br>
+               <span class="note">E</span><br>
+<span class="note">D|-----2----</span><br>
+<span class="note">A|-2-4---4-2</span><br>
+               <span class="note">A'</span><br>
+<span class="note">e|-2s4-4-4</span><br>
+<span class="note">b|-3s4-5-5</span><br>
+<span class="note">g|-2s4-5-5</span><br>
+</p>
 
-E                 B            F#m
- Tsy navy ndreky vatañanao fo fa 
-             A          
-Nitôndra ody, nitôndra hañy 
-E          B                        
- Izy koa anao fo zaho tsy hiova 
-F#m    A                  E     B  F#m A
-   Fitiavako anao tsy ela amiñy 
+<p>
+<span class="tonony">Tonony 1</span><br>
+<span class="note">E                  B</span><br>
+Tsy hambaranao marary mare zaho <br>
+<span class="note">F#m        A          </span><br>
+Anao navy, anao namangy <br>
+<span class="note">E            B        </span><br>
+Ndreky tsy navozoanao vava <br>
+<span class="note">F#m  A               E             </span><br>
+Isaorako anao magnangy <br>
+<br>
+<span class="note">E                 B            F#m</span><br>
+Tsy navy ndreky vatañanao fo fa <br>
+               <span class="note">A          </span><br>
+Nitôndra ody, nitôndra hañy <br>
+<span class="note">E          B                        </span><br>
+Izy koa anao fo zaho tsy hiova <br>
+<span class="note">F#m    A                  E     B  F#m A</span><br>
+Fitiavako anao tsy ela aminy <br>
+</p>
 
-Tonony 2
-E              B
- Taratasy tsy tapak’herinandro 
-F#m            A
- Ianao tsy teo, nandeha vakansy 
-E           B
- Hempaka anteña mikônty andro 
-F#m    A                E
-   Kô sôratra fô tsy maharaka 
+<p>
+<span class="tonony">Tonony 2</span><br>
+<span class="note">E              B</span><br>
+Taratasy tsy tapak’herinandro <br>
+<span class="note">F#m            A</span><br>
+Ianao tsy teo, nandeha vakansy <br>
+<span class="note">E           B</span><br>
+Hempaka anteña mikônty andro <br>
+<span class="note">F#m    A                E</span><br>
+Kô sôratra fô tsy maharaka <br>
+<br>
+<span class="note">E          B</span><br>
+Haiko tsy tian-dry mamanao zaho <br>
+<span class="note">F#m        A</span><br>
+Retry ela, na tato ho ato <br>
+<span class="note">E       B              F#m</span><br>
+Reo malegny mbala ho gajo <br>
+<span class="note">A                E   A-E</span><br>
+Zegny nambaranao zaho<br>
+</p> 
 
- E          B
-Haiko tsy tian-dry mamanao zaho 
-F#m        A
- Retry ela, na tato ho ato 
-E       B              F#m
- Reo malegny mbala ho gajo 
- A                E   A-E
-Zegny nambaranao zaho 
+<p class="refrain">
+<span class="tonony">Tetezana</span><br>
+<span class="note">C#m                G#m</span><br>
+Tsy am-pôkon’i baba tsy andeha amin-dry nindry <br>
+<span class="note">A                     E</span><br>
+Fa nagniriam-pitiavaña karaha olo jiaby <br>
+            <span class="note">F#m             B</span><br>
+Karaha olo jiaby, kara olo jiaby<br>
+<br>
+Fiverenana<br>
+<span class="note">E     F#m    E     F#m</span><br>
+Havana e, fitiavana e<br>
+<span class="note">C#m         G#m             B</span><br>
+Isaorana Anao Zagnahary hamaly <br>
+<span class="note">E     F#m      E     F#m</span><br>
+Havana e, hasambarana e<br>
+<span class="note">C#m              G#m</span><br>
+Haravoaña tsy hiala aminao <br>
+<span class="note">A                    G#m       </span><br>
+Ambignin-dava amin’zay raha ataony <br>
+   <span class="note">B          A</span><br>
+Fa havana anao <br>
+</p>
 
-     Tetezana
-             C#m                G#m
-     Tsy am-pôkon’i baba tsy andeha amin-dry nindry 
-         A                     E
-     Fa nagniriam-pitiavaña karaha olo jiaby 
-                  F#m             B
-     Karaha olo jiaby, kara olo jiaby
+<p>
+<span class="tonony">Tonony 3</span><br>
+<span class="note">E             B</span><br>
+Na ho avy ny ela hagnôva raha <br>
+<span class="note">F#m       A</span><br>
+Aza misy  sañatria <br>
+<span class="note">E           B             F#m</span><br>
+Koa tsy anjaratsika raharaha <br>
+   <span class="note">A                  E</span><br>
+Havako anao ndre doria <br>
+<br>
+   <span class="note">E            B                 F#m</span><br>
+Tsy hijôro ny ratsy anteña ndre zegny <br>
+            <span class="note">A               E</span><br>
+Fa mba midogno piko lava hely <br>
+               <span class="note">B                    F#m</span><br>
+F’izy koa ny añaty fônakahy tianao re <br>
+   <span class="note">(A)            (E)</span><br>
+Havako anao, fitiavako anao ô <br>
+</p>
 
-     Fiverenana
-      E     F#m    E     F#m
-     Havana e, fitiavana e
-     C#m         G#m             B
-      Isaorana Anao Zagnahary hamaly 
-      E     F#m      E     F#m
-     Havana e, hasambarana e
-     C#m              G#m
-      Haravoaña tsy hiala aminao 
-     A                    G#m       
-      Ambignin-dava amin’zay raha ataony 
-         B          A
-     Fa havana anao 
+<p class="refrain">
+<span class="refrain">Fiverenana (2x)  </span><br>
+<span class="note">E     F#m    E     F#m  </span><br>
+Havana e, fitiavana e  <br>
+<span class="note">C#m         G#m             B  </span><br>
+Isaorana Anao Zagnahary hamaly  <br>
+<span class="note">E     F#m      E     F#m  </span><br>
+Havana e, hasambarana e  <br>
+<span class="note">C#m              G#m  </span><br>
+Haravoaña tsy hiala aminao  <br>
+<span class="note">A                    G#m  </span><br>
+Ambignin-dava amin’zay raha ataony  <br>
+   <span class="note">B  </span><br>
+Fa havana anao<br> 
+</p>
 
-Tonony 3
-E             B
- Na ho avy ny ela hagnôva raha 
-F#m       A
- Aza misy  sañatria 
-E           B             F#m
- Koa tsy anjaratsika raharaha 
- A                  E
-Havako anao ndre doria 
+<p>
+<span class="tonony">Famaranana </span><br>
+<span class="note">E                  B  </span><br>
+Tsy hambaranao marary mare zaho <br>
+<span class="note">F#m        A  </span><br>
+Anao navy, anao namangy <br>
+<span class="note">E            B  </span><br>
+Ndreky tsy navozoanao vava <br>
+<span class="note">F#m  A               E  </span><br>
+Isaorako anao magnangy <br>
+</p>
 
-  E            B                 F#m
-Tsy hijôro ny ratsy anteña ndre zegny 
-          A               E
-Fa mba midogno piko lava hely 
-               B                    F#m
-F’izy koa ny añaty fônakahy tianao re 
- (A)            (E)
-Havako anao, fitiavako anao ô 
-
-     Fiverenana (2x)  
-      E     F#m    E     F#m  
-     Havana e, fitiavana e  
-     C#m         G#m             B  
-      Isaorana Anao Zagnahary hamaly  
-      E     F#m      E     F#m  
-     Havana e, hasambarana e  
-     C#m              G#m  
-      Haravoaña tsy hiala aminao  
-     A                    G#m  
-      Ambignin-dava amin’zay raha ataony  
-         B  
-     Fa havana anao 
-
-Famaranana 
-E                  B  
- Tsy hambaranao marary mare zaho 
-F#m        A  
- Anao navy, anao namangy 
-E            B  
- Ndreky tsy navozoanao vava 
-F#m  A               E  
-   Isaorako anao magnangy 
+</body>
+</html>
 `
